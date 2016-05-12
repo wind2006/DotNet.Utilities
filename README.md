@@ -7,3 +7,4 @@
 ##7.YanZhiwei.Projects为基于开发项目；
 ##8.YanZhiwei.TrainingSeries为诸如mvc一类新技术学习；
 ##9.YanZhiwei.JavaScript.Utilities为使用Js,Jquery总结封装。
+20160512
