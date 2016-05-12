@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{525C1689-28DE-4AE2-AEE5-0E9E7E75D8CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YanZhiwei.DotNet.DevExpress12._1.Utilities</RootNamespace>
+    <AssemblyName>DotNet.DevExpress12.1.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\DotNet.DevExpress12.1.Utilities.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.Charts.v12.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.Data.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.Printing.v12.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.Utils.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.XtraBars.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.XtraCharts.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.1.UI, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.XtraCharts.v12.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.XtraEditors.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.XtraGrid.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.XtraPrinting.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DevExpress.XtraTreeList.v12.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseEditHelper.cs" />
+    <Compile Include="Core\BuilderGridLocalizer.cs" />
+    <Compile Include="Core\CopyNodesOperation.cs" />
+    <Compile Include="ChartHelper.cs" />
+    <Compile Include="ComboBoxEditHelper.cs" />
+    <Compile Include="CustomControl\CustomDateEdit\DateEditEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomRangeTrackBar\RangeTrackBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomRangeTrackBar\RangeTrackBarEx.Designer.cs">
+      <DependentUpon>RangeTrackBarEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomRangeTrackBar\CustomRangeTrackBarViewInfo.cs" />
+    <Compile Include="CustomControl\CustomRangeTrackBar\RepositoryItemRangeTrackBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomRangeTrackBar\SkinCustomRangeTrackBarObjectPainter.cs" />
+    <Compile Include="CustomControl\CustomTrackBar\TrackBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomTrackBar\TrackBarEx.Designer.cs">
+      <DependentUpon>TrackBarEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomTrackBar\CustomTrackBarViewInfo.cs" />
+    <Compile Include="CustomControl\CustomTrackBar\RepositoryItemTrackBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomTrackBar\RepositoryItemTrackBarEx.Designer.cs">
+      <DependentUpon>RepositoryItemTrackBarEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomTrackBar\SkinCustomTrackBarObjectPainter.cs" />
+    <Compile Include="CustomControl\DrawingTickEventArgs.cs" />
+    <Compile Include="DevMessageBoxHelper.cs" />
+    <Compile Include="GridHelper.cs" />
+    <Compile Include="HTMLTextFormattingHelper.cs" />
+    <Compile Include="ListBoxHelper.cs" />
+    <Compile Include="LookUpEditHelper.cs" />
+    <Compile Include="Models\PrintItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryItemComboBoxHelper.cs" />
+    <Compile Include="SplashScreenHelper.cs" />
+    <Compile Include="TabControlHelper.cs" />
+    <Compile Include="TextEditHelper.cs" />
+    <Compile Include="ToolTipHelper.cs" />
+    <Compile Include="TreeListHelper.cs" />
+    <Compile Include="Core\TreeListViewState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLL\DevExpress.Charts.v12.1.Core.dll" />
+    <Content Include="DLL\DevExpress.Data.v12.1.dll" />
+    <Content Include="DLL\DevExpress.Printing.v12.1.Core.dll" />
+    <Content Include="DLL\DevExpress.Utils.v12.1.dll" />
+    <Content Include="DLL\DevExpress.XtraBars.v12.1.dll" />
+    <Content Include="DLL\DevExpress.XtraCharts.v12.1.dll" />
+    <Content Include="DLL\DevExpress.XtraCharts.v12.1.UI.dll" />
+    <Content Include="DLL\DevExpress.XtraEditors.v12.1.dll" />
+    <Content Include="DLL\DevExpress.XtraGrid.v12.1.dll" />
+    <Content Include="DLL\DevExpress.XtraPrinting.v12.1.dll" />
+    <Content Include="DLL\DevExpress.XtraTreeList.v12.1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Interfaces\YanZhiwei.DotNet2.Interfaces.csproj">
+      <Project>{cd749b3d-29d3-4ae3-8acd-21210bc6e069}</Project>
+      <Name>YanZhiwei.DotNet2.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Utilities\YanZhiwei.DotNet2.Utilities.csproj">
+      <Project>{2868748d-6fec-4423-8254-bc366507c589}</Project>
+      <Name>YanZhiwei.DotNet2.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet3.5.Utilities\YanZhiwei.DotNet3.5.Utilities.csproj">
+      <Project>{fce5db97-96ec-4e53-bc19-eee6f2aa88e0}</Project>
+      <Name>YanZhiwei.DotNet3.5.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

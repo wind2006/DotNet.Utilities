@@ -1,0 +1,5 @@
+﻿Enterprise Library 6 – April 2013：
+System Requirements
+•Supported architectures: x86 and x64.
+•Operating systems: Microsoft Windows 8, Microsoft Windows 7, Windows Server 2008 R2, Windows Server 2012.
+•Supported .NET Frameworks: Microsoft .NET Framework 4.5, .NET for Windows Store Apps (previously known as Windows Runtime) for Unity and Transient Fault Handling Application Blocks.

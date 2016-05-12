@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF4E5B5A-CBB5-41A1-B91B-46E9DADC3F29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcSolution.Account.BLL</RootNamespace>
+    <AssemblyName>MvcSolution.Account.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CmsService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cms.Account.Contract\MvcSolution.Cms.Contract.csproj">
+      <Project>{344cd318-38a4-4585-b691-f55ba39b59b7}</Project>
+      <Name>MvcSolution.Cms.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cms.Account.DAL\MvcSolution.Cms.DAL.csproj">
+      <Project>{2152b12e-2233-4e86-92d1-cb750069736f}</Project>
+      <Name>MvcSolution.Cms.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcSolution.Account.Contract\MvcSolution.GMS.Contract.csproj">
+      <Project>{9e2059ad-fd55-4da6-bc53-0bd382e3a20d}</Project>
+      <Name>MvcSolution.GMS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcSolution.Account.DAL\MvcSolution.GMS.DAL.csproj">
+      <Project>{90568bdc-2e27-47b9-9401-e068188b6be2}</Project>
+      <Name>MvcSolution.GMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Interfaces\YanZhiwei.DotNet2.Interfaces.csproj">
+      <Project>{cd749b3d-29d3-4ae3-8acd-21210bc6e069}</Project>
+      <Name>YanZhiwei.DotNet2.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Utilities\YanZhiwei.DotNet2.Utilities.csproj">
+      <Project>{2868748d-6fec-4423-8254-bc366507c589}</Project>
+      <Name>YanZhiwei.DotNet2.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet3.5.Utilities\YanZhiwei.DotNet3.5.Utilities.csproj">
+      <Project>{fce5db97-96ec-4e53-bc19-eee6f2aa88e0}</Project>
+      <Name>YanZhiwei.DotNet3.5.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet4.Framework.Data\YanZhiwei.DotNet4.Framework.Data.csproj">
+      <Project>{3e3ad6dc-66cd-4b62-9c90-dcfd6805a92c}</Project>
+      <Name>YanZhiwei.DotNet4.Framework.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.Framework.Common\YanZhiwei.DotNet.Framework.Contract.csproj">
+      <Project>{5cd641fa-33ba-4fa3-9df4-97a0c2e53e14}</Project>
+      <Name>YanZhiwei.DotNet.Framework.Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

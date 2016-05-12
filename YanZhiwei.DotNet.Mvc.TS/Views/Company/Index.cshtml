@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<YanZhiwei.DotNet.Mvc.Learn.Models.Worker>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name:@Html.TextBox("searchString", new { @class = "form-control", @Style = "display:inline" });
+        @Html.Submit("Submit")
+    </p>
+}
+<table class="table">
+    <tr>
+        @*<th>@Html.DisplayNameFor(model => model.FirstName)</th>*@
+        @*<th>@Html.DisplayNameFor(model => model.LastName)</th>*@
+        @*<th>@Html.ActionLink("First Name", "Index", new { sortOrder = ViewBag.firstName })</th>*@
+        @*<th>@Html.ActionLink("First Name", "Index", new { sortOrder = ViewBag.lastName })</th>*@
+        <th>@Html.ActionLink("First Name", "Index", new { orderby = "FirstName", desc = ViewBag.desc })</th>
+        <th>@Html.ActionLink("Last Name", "Index", new { orderby = "LastName", desc = ViewBag.desc })</th>
+        <th>@Html.DisplayNameFor(model => model.Gender)</th>
+        <th>@Html.DisplayNameFor(model => model.Rating)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+            <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+            <td>@Html.DisplayFor(modelItem => item.Gender)</td>
+            <td>@Html.DisplayFor(modelItem => item.Rating)</td>
+        </tr>
+    }
+</table>

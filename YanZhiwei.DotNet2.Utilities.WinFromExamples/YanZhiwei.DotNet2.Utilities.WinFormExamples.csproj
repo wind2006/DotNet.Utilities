@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24F6D3B4-6D77-4A9A-AA9B-239844E45EE9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YanZhiwei.DotNet2.Utilities.WinFromExamples</RootNamespace>
+    <AssemblyName>DotNet2.Utilities.WinFrom.Examples</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="org.in2bits.MyXls">
+      <HintPath>..\YanZhiwei.DotNet.MyXls.Utilities\DLL\org.in2bits.MyXls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="winLanguageExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winLanguageExample.Designer.cs">
+      <DependentUpon>winLanguageExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winLogin.Designer.cs">
+      <DependentUpon>winLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winSerialPortExamle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winSerialPortExamle.Designer.cs">
+      <DependentUpon>winSerialPortExamle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winCheckedListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winCheckedListBox.Designer.cs">
+      <DependentUpon>winCheckedListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winMain.Designer.cs">
+      <DependentUpon>winMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="winGridExamle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winGridExamle.Designer.cs">
+      <DependentUpon>winGridExamle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winProgressBarExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winProgressBarExample.Designer.cs">
+      <DependentUpon>winProgressBarExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winTreeView.Designer.cs">
+      <DependentUpon>winTreeView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="winLanguageExample.en-Us.resx">
+      <DependentUpon>winLanguageExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winLanguageExample.resx">
+      <DependentUpon>winLanguageExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winLanguageExample.zh-Cn.resx">
+      <DependentUpon>winLanguageExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winLogin.resx">
+      <DependentUpon>winLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winSerialPortExamle.resx">
+      <DependentUpon>winSerialPortExamle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winCheckedListBox.resx">
+      <DependentUpon>winCheckedListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winMain.resx">
+      <DependentUpon>winMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="winGridExamle.resx">
+      <DependentUpon>winGridExamle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winProgressBarExample.resx">
+      <DependentUpon>winProgressBarExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winTreeView.resx">
+      <DependentUpon>winTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YanZhiwei.DotNet.MyXls.Utilities\YanZhiwei.DotNet.MyXls.Utilities.csproj">
+      <Project>{1c347cde-8052-44b4-8d74-965c91bcc07f}</Project>
+      <Name>YanZhiwei.DotNet.MyXls.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Utilities\YanZhiwei.DotNet2.Utilities.csproj">
+      <Project>{2868748d-6fec-4423-8254-bc366507c589}</Project>
+      <Name>YanZhiwei.DotNet2.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNet.Log4Net.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper">
+            <summary>
+            Log4Net帮助类
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.SetLogger(System.String)">
+             <summary>
+            设置日志记录Logger
+             </summary>
+             <param name="loggerName">Name of the logger.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.WriteDebug(System.String,System.Exception)">
+            <summary>
+            Writes the debug.
+            </summary>
+            <param name="debug">The debug.</param>
+            <param name="ex">The ex.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.WriteDebug(System.String)">
+            <summary>
+            Writes the debug.
+            </summary>
+            <param name="debug">The debug.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.WriteError(System.String)">
+            <summary>
+            Writes the error.
+            </summary>
+            <param name="error">The error.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.WriteError(System.String,System.Exception)">
+            <summary>
+            Writes the error.
+            </summary>
+            <param name="Error">The error.</param>
+            <param name="ex">The ex.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.WriteFatal(System.String)">
+            <summary>
+            Writes the fatal.
+            </summary>
+            <param name="fatal">The fatal.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.WriteFatal(System.String,System.Exception)">
+            <summary>
+            Writes the fatal.
+            </summary>
+            <param name="fatal">The fatal.</param>
+            <param name="ex">The ex.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.WriteInfo(System.String)">
+            <summary>
+            Writes the information.
+            </summary>
+            <param name="info">The information.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.WriteInfo(System.String,System.Exception)">
+            <summary>
+            Writes the information.
+            </summary>
+            <param name="info">The information.</param>
+            <param name="ex">The ex.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.WriteWarn(System.String,System.Exception)">
+            <summary>
+            Writes the warn.
+            </summary>
+            <param name="warn">The warn.</param>
+            <param name="ex">The ex.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Log4Net.Utilities.Log4NetHelper.WriteWarn(System.String)">
+            <summary>
+            Writes the warn.
+            </summary>
+            <param name="warn">The warn.</param>
+        </member>
+    </members>
+</doc>

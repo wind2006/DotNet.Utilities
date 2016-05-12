@@ -1,0 +1,16 @@
+Enable-Migrations -ContextTypeName YanZhiwei.MVC5.ContosoUniversity
+add-migration InitialCreate
+update-database
+
+实体框架会检测到数据模型已经进行了更改并且要求数据库架构也作出相应的改变。您将通过使用迁移来在不丢失数据的情况下升级架构。如果您更改了使用Seed方法创建的数据，您在Seed方法中所使用的AddOrUpdate方法会更改回其原始状态(AddOrUpdate是一个相当于"upsert"操作的数据库术语)。
+
+在程序包管理器控制台中，输入以下命令：
+
+add-migration MaxLengthOnNames
+update-database
+
+ Column特性改变了SchoolContext的模型，所以它不会匹配数据库。在程序包管理器通知台中创建另一个迁移，输入以下命令：
+
+add-migration ColumnFirstName
+update-database
+

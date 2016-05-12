@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNet2.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="T:YanZhiwei.DotNet2.Interfaces.DataAccess.IPagedList">
+            <summary>
+            分页集合接口
+            </summary>
+            时间：2016-01-05 11:01
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet2.Interfaces.DataAccess.IPagedList.CurrentPageIndex">
+            <summary>
+            当前页索引
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet2.Interfaces.DataAccess.IPagedList.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet2.Interfaces.DataAccess.IPagedList.TotalItemCount">
+            <summary>
+            记录总数
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet2.Interfaces.DataAccess.ISQLHelper">
+            <summary>
+            SQL操作接口
+            </summary>
+            时间：2015-12-31 10:09
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet2.Interfaces.DataAccess.ISQLHelper.ExecuteNonQuery(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            ExecuteNonQuery
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="parameters">参数</param>
+            <returns>影响行数</returns>
+            时间：2015-12-31 10:09
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet2.Interfaces.DataAccess.ISQLHelper.ExecuteReader(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            Executes the reader.ExecuteReader
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="parameters">参数</param>
+            <returns>IDataReader</returns>
+            时间：2015-12-31 10:09
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet2.Interfaces.DataAccess.ISQLHelper.StoreExecuteDataReader(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            StoreExecuteDataReader
+            </summary>
+            <param name="proName">存储过程名称</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+            时间：2015-12-31 10:09
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet2.Interfaces.DataAccess.ISQLHelper.ExecuteDataTable(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            ExecuteDataTable
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+            时间：2015-12-31 10:10
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet2.Interfaces.DataAccess.ISQLHelper.ExecuteScalar(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            ExecuteScalar
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="parameters">参数</param>
+            <returns>Object</returns>
+            时间：2015-12-31 10:10
+            备注：
+        </member>
+    </members>
+</doc>

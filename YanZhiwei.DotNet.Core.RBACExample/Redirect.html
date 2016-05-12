@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>继续</title>
+    <script type="text/javascript">
+        //秒数
+        var count = 3;
+        //setIntervalId
+        var setIntervalId;
+        var url = location.href;
+        url = url.substring(url.indexOf("?") + 1, url.length);
+        function Redirect() {
+            var displayOjb = document.getElementById("showTime")
+            if (count == 0) {
+                //清除setInterval
+                window.clearInterval(setIntervalId);
+                displayOjb.innerHTML = "网页正在自动跳转";
+                location.href = url;
+            }
+            else {
+                displayOjb.innerHTML = "操作成功！" + count + "秒后网页自动跳转。";
+                count--;
+            }
+        }
+        setIntervalId = setInterval("Redirect()", 1000);
+    </script>
+</head>
+<body>
+    <div id="showTime"></div>
+</body>
+</html>>

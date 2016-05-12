@@ -1,0 +1,32 @@
+﻿@model IEnumerable<YanZhiwei.BookShop.Domain.Entities.Book>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@foreach (var p in Model)
+{
+    <div class="item" style="border-bottom:1px dashed silver;">
+        <h3>@p.Title</h3>
+        <h4>@p.Summary</h4>
+        <p>价格：@p.Price.ToString("c") </p>
+    </div>
+}
+@*Razor视图引擎支持将View中的一部分内容分离出来，以便在需要的地方重复利用，减少了代码的冗余。*@
+@*注意，section只能在当前View或它的Layout中被调用。@RenderSection方法没有找到参数指定的section会抛异常，如果不确定section是否存在，则需要指定第二个参数的值为false。譬如：@RenderSection("scripts", false)*@
+@*我们还可以通过 IsSectionDefined 方法来判断一个section是否被定义或在当前View中是否能调用得到，如：@if (IsSectionDefined("Footer"))*@
+@section Header {
+    <div class="view">
+        @foreach (string str in new[] { "Home", "List", "Edit" })
+        {
+            @Html.ActionLink(str, str, null, new { style = "margin: 5px" })
+        }
+    </div>
+}
+
+@section Footer {
+    <div class="view">
+        This is the footer
+    </div>
+}
+

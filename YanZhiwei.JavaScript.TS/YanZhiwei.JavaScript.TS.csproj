@@ -1,0 +1,890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDA33B03-6D8F-4E36-9DAC-2473F98EA25C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YanZhiwei.JavaScript.Learn</RootNamespace>
+    <AssemblyName>YanZhiwei.JavaScript.Learn</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bootstrap\V3\css\bootstrap-theme.css.map" />
+    <Content Include="Bootstrap\V3\css\bootstrap.css.map" />
+    <Content Include="Bootstrap\V3\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Bootstrap\V3\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Bootstrap\V3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master.zip" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\bower.json" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\CNAME" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\coffeelint.json" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\composer.json" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\CONTRIBUTING.md" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\gulpfile.coffee" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\karma.json" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\LICENSE" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\package.json" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\README.md" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\coffee\bootstrap-switch.coffee" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\coffee\bootstrap-switch.tests.coffee" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\docs\documentation-2.jade" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\docs\events.jade" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\docs\examples.jade" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\docs\index.jade" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\docs\main.jade" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\docs\methods.jade" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\docs\options.jade" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\less\bootstrap2\bootstrap-switch.less" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\less\bootstrap2\build.less" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\less\bootstrap2\mixins.less" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\less\bootstrap2\variables.less" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\less\bootstrap3\bootstrap-switch.less" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\less\bootstrap3\build.less" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\less\bootstrap3\mixins.less" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\src\less\bootstrap3\variables.less" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\AjaxBaseTable.aspx" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\BaseTable.aspx" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\Contributing.md" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\resources\examples.php" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\resources\syntax\Syntax Highlighter license" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\ids-arrays.php" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\ids-objects.php" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\jsonp.php" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\objects.php" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\post.php" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\server_processing.php" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\ssp.class.php" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\Readme.md" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\Readme.md" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\Readme.md" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\Readme.md" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\examples\data\ssp.php" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\Readme.md" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\images\Sorting icons.psd" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\Readme.md" />
+    <Content Include="BackHandler\BaseHandler.ashx" />
+    <Content Include="jstree\icon\chrome.png" />
+    <Content Include="jstree\icon\ie.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\JsTreeIndex.aspx" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\bower.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\component.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\composer.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\basic\root.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\.htaccess" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\asdf\ajax_children.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\asdf\ajax_children2.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\asdf\asdf asdf" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\asdf\asdfasdf" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\asdf\asdfasdfasdfasdfasdf" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\asdf\New file4" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\ajax_children.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\ajax_demo_children.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\ajax_demo_roots.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\ajax_roots.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\images\ajax_children2.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\jstree.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\index.php" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\sitebrowser\class.db.php" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\sitebrowser\class.tree.php" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\sitebrowser\index.php" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\jquery.min.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\jstree.jquery.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\LICENSE-MIT" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\package.json" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\README.md" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\base.less" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\default-dark\style.less" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\default\style.less" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\main.less" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\mixins.less" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\responsive.less" />
+    <Content Include="BackHandler\root.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bootstrap\V3\css\bootstrap-theme.css" />
+    <Content Include="Bootstrap\V3\css\bootstrap-theme.min.css" />
+    <Content Include="Bootstrap\V3\css\bootstrap.css" />
+    <Content Include="Bootstrap\V3\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\V3\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Bootstrap\V3\FormAlert.aspx" />
+    <Content Include="Bootstrap\V3\FormBase.aspx" />
+    <Content Include="Bootstrap\V3\FormButton.aspx" />
+    <Content Include="Bootstrap\V3\FormCarousel.aspx" />
+    <Content Include="Bootstrap\V3\FormDropdown.aspx" />
+    <Content Include="Bootstrap\V3\FormForm.aspx" />
+    <Content Include="Bootstrap\V3\FormGridSystem.aspx" />
+    <Content Include="Bootstrap\V3\FormInput.aspx" />
+    <Content Include="Bootstrap\V3\FormJumbotron.aspx" />
+    <Content Include="Bootstrap\V3\FormList-group.aspx" />
+    <Content Include="Bootstrap\V3\FormMedia-list.aspx" />
+    <Content Include="Bootstrap\V3\FormModal.aspx" />
+    <Content Include="Bootstrap\V3\FormNavbar.aspx" />
+    <Content Include="Bootstrap\V3\FormNavTabs.aspx" />
+    <Content Include="Bootstrap\V3\FormPagination.aspx" />
+    <Content Include="Bootstrap\V3\FormPanel.aspx" />
+    <Content Include="Bootstrap\V3\FormpoPover.aspx" />
+    <Content Include="Bootstrap\V3\FormTable.aspx" />
+    <Content Include="Bootstrap\V3\FormThumbnail.aspx" />
+    <Content Include="Bootstrap\V3\images\14.jpg" />
+    <Content Include="Bootstrap\V3\images\15.jpg" />
+    <Content Include="Bootstrap\V3\images\16.jpg" />
+    <Content Include="Bootstrap\V3\js\bootstrap.js" />
+    <Content Include="Bootstrap\V3\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\V3\js\html5shiv.min.js" />
+    <Content Include="Bootstrap\V3\js\jquery-1.11.1.min.js" />
+    <Content Include="Bootstrap\V3\js\npm.js" />
+    <Content Include="Bootstrap\V3\js\respond.min.js" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\.gitignore" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\dist\css\bootstrap2\bootstrap-switch.css" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\dist\css\bootstrap2\bootstrap-switch.min.css" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\dist\css\bootstrap3\bootstrap-switch.css" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\dist\css\bootstrap3\bootstrap-switch.min.css" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\dist\js\bootstrap-switch.js" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\dist\js\bootstrap-switch.min.js" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\css\highlight.css" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\css\main.css" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\js\highlight.js" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\js\jquery.min.js" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\docs\js\main.js" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\documentation-2.html" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\events-3.html" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\events.html" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\examples.html" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\gulpfile.js" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\index.html" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\main.html" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\methods-3.html" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\methods.html" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\options-3.html" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\options.html" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\test\bootstrap-switch.js" />
+    <Content Include="Bootstrap\V3\Switch\bootstrap-switch-master\test\bootstrap-switch.tests.js" />
+    <Content Include="Bootstrap\V3\Switch\FormSwitch.aspx" />
+    <Content Include="Bootstrap\V3\templateBase.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\column_render.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\complex_header.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\defaults.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\dom_multiple_elements.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\dom_toolbar.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\dt_events.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\events_live.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\footer_callback.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\html5-data-attributes.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\html5-data-options.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\language_file.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\length_menu.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\object_dom_read.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\row_callback.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\row_grouping.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\advanced_init\sort_direction_control.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\custom_data_flat.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\custom_data_property.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\data\arrays.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\data\arrays_custom_prop.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\data\arrays_subobjects.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\data\objects.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\data\objects_deep.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\data\objects_root_array.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\data\objects_subarrays.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\data\orthogonal.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\deep.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\defer_render.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\null_data_source.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\objects.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\objects_subarrays.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\orthogonal-data.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\ajax\simple.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\add_row.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\api_in_init.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\counter_columns.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\form.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\highlight.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\multi_filter.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\multi_filter_select.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\regex.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\row_details.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\select_row.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\select_single_row.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\show_hide.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\api\tabs_and_scrolling.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\alt_pagination.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\comma-decimal.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\complex_header.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\dom.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\filter_only.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\flexible_width.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\hidden_columns.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\language.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\multiple_tables.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\multi_col_sort.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\scroll_x.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\scroll_xy.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\scroll_y.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\scroll_y_theme.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\state_save.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\table_sorting.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\basic_init\zero_configuration.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\data_sources\ajax.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\data_sources\dom.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\data_sources\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\data_sources\js_array.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\data_sources\server_side.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\plug-ins\api.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\plug-ins\dom_sort.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\plug-ins\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\plug-ins\range_filtering.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\plug-ins\sorting_auto.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\plug-ins\sorting_manual.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\resources\demo.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\resources\demo.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\resources\details_close.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\resources\details_open.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\resources\syntax\shCore.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\resources\syntax\shCore.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\custom_vars.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\defer_loading.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\ids.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\jsonp.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\object_data.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\pipeline.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\post.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\row_details.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\mysql.sql" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\postgres.sql" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\sqlite.sql" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\scripts\sqlserver.sql" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\select_rows.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\server_side\simple.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\bootstrap.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\cell-border.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\compact.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\display.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\foundation.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\hover.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\jqueryUI.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\no-classes.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\order-column.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\row-border.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\examples\styling\stripe.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\examples\columns.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\examples\complete-callback.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\examples\fill-both.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\examples\fill-horizontal.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\examples\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\examples\scrolling.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\examples\simple.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\examples\step-callback.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\images\filler.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\AutoFill\Readme.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\alt_insert.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\colvis.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\col_filter.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\fixedcolumns.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\fixedheader.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\jqueryui.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\new_init.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\predefined.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\realtime.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\reset.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\scrolling.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\server_side.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\simple.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\examples\state_save.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\images\insert.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColReorder\License.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\button_order.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\exclude_columns.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\group_columns.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\jqueryui.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\mouseover.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\new_init.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\restore.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\simple.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\text.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\title_callback.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\two_tables.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\examples\two_tables_identical.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\ColVis\License.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\bootstrap.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\colvis.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\col_filter.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\css_size.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\index_column.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\left_right_columns.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\right_column.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\rowspan.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\server-side-processing.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\simple.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\size_fixed.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\size_fluid.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\examples\two_columns.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedColumns\License.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\examples\header_footer.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\examples\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\examples\simple.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\examples\top_left_right.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\examples\two_tables.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\examples\zIndexes.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\FixedHeader\Readme.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\KeyTable\examples\events.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\KeyTable\examples\html.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\KeyTable\examples\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\KeyTable\examples\scrolling.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\KeyTable\examples\simple.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\KeyTable\Readme.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\display-control\fixedHeader.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\initialisation\default.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\styling\compact.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\examples\styling\scrolling.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Responsive\License.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\examples\api_scrolling.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\examples\data\2500.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\examples\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\examples\large_js_source.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\examples\server-side_processing.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\examples\simple.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\examples\state_saving.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\images\loading-background.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\Scroller\Readme.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\ajax.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\alter_buttons.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\bootstrap.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\button_text.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\collection.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\defaults.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\index.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\jqueryui.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\multiple_tables.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\multi_instance.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\new_init.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\pdf_message.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\plug-in.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\select_column.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\select_multi.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\select_os.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\select_single.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\simple.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\examples\swf_path.html" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\collection.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\copy.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\csv.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\pdf.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\print.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\print_hover.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\xls.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\license.txt" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\css\jquery.dataTables.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\css\jquery.dataTables.min.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\css\jquery.dataTables_themeroller.css" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\images\favicon.ico" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\images\sort_asc.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\images\sort_asc_disabled.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\images\sort_both.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\images\sort_desc.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\images\sort_desc_disabled.png" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\js\jquery.dataTables.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\js\jquery.dataTables.min.js" />
+    <Content Include="DataTables\V1\DataTables-1.10.6\media\js\jquery.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Jquery UI\1.11.2\FormDialog.aspx" />
+    <Content Include="Jquery UI\1.11.2\FormDialogTemplate.aspx" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\external\jquery\jquery.js" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-icons_222222_256x240.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\index.html" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\jquery-ui.css" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\jquery-ui.js" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\jquery-ui.min.css" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\jquery-ui.min.js" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\jquery-ui.structure.css" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\jquery-ui.structure.min.css" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\jquery-ui.theme.css" />
+    <Content Include="Jquery UI\1.11.2\jquery-ui-1.11.2.custom\jquery-ui.theme.min.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\.gitignore" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\basic\index.html" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\asdf\New Text Document.txt" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\ajax_nodes.html" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\apple-touch-icon-precomposed.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\bootstrap\css\bootstrap.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\bootstrap\js\bootstrap.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\dist\jstree.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\dist\jstree.min.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\dist\libs\jquery.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\dist\libs\jquery.ui.touch.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\dist\libs\require.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\dist\themes\default\32px.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\dist\themes\default\40px.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\dist\themes\default\style.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\dist\themes\default\style.min.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\dist\themes\default\throbber.gif" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\docs.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\docs.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\favicon.ico" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\html5.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\images\browsers.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\images\find.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\images\logo.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\images\tree.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\images\tree_icon.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\jquery-1.10.2.min.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\jquery.address-1.6.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\respond.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\assets\vakata.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\data\root\index.html" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\filebrowser\file_sprite.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\demo\sitebrowser\data.sql" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\jstree.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\jstree.min.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\themes\default-dark\32px.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\themes\default-dark\40px.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\themes\default-dark\style.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\themes\default-dark\style.min.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\themes\default-dark\throbber.gif" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\themes\default\32px.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\themes\default\40px.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\themes\default\style.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\themes\default\style.min.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\dist\themes\default\throbber.gif" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\gruntfile.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\intro.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.checkbox.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.contextmenu.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.dnd.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.massload.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.search.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.sort.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.state.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.types.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.unique.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\jstree.wholerow.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\misc.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\outro.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\sample.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\default-dark\32px.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\default-dark\40px.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\default-dark\style.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\default-dark\throbber.gif" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\default\32px.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\default\40px.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\default\style.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\themes\default\throbber.gif" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\src\vakata-jstree.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\test\unit\index.html" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\test\unit\libs\qunit.css" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\test\unit\libs\qunit.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\test\unit\test.js" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\test\visual\d.html" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\test\visual\m.html" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\test\visual\screenshots\d.png" />
+    <Content Include="jstree\V3\jstree-3.1.0\jstree\test\visual\screenshots\m.png" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackHandler\BaseHandler.ashx.cs">
+      <DependentUpon>BaseHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormAlert.aspx.cs">
+      <DependentUpon>FormAlert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormAlert.aspx.designer.cs">
+      <DependentUpon>FormAlert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormBase.aspx.cs">
+      <DependentUpon>FormBase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormBase.aspx.designer.cs">
+      <DependentUpon>FormBase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormButton.aspx.cs">
+      <DependentUpon>FormButton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormButton.aspx.designer.cs">
+      <DependentUpon>FormButton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormCarousel.aspx.cs">
+      <DependentUpon>FormCarousel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormCarousel.aspx.designer.cs">
+      <DependentUpon>FormCarousel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormDropdown.aspx.cs">
+      <DependentUpon>FormDropdown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormDropdown.aspx.designer.cs">
+      <DependentUpon>FormDropdown.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormForm.aspx.cs">
+      <DependentUpon>FormForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormForm.aspx.designer.cs">
+      <DependentUpon>FormForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormGridSystem.aspx.cs">
+      <DependentUpon>FormGridSystem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormGridSystem.aspx.designer.cs">
+      <DependentUpon>FormGridSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormInput.aspx.cs">
+      <DependentUpon>FormInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormInput.aspx.designer.cs">
+      <DependentUpon>FormInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormJumbotron.aspx.cs">
+      <DependentUpon>FormJumbotron.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormJumbotron.aspx.designer.cs">
+      <DependentUpon>FormJumbotron.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormList-group.aspx.cs">
+      <DependentUpon>FormList-group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormList-group.aspx.designer.cs">
+      <DependentUpon>FormList-group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormMedia-list.aspx.cs">
+      <DependentUpon>FormMedia-list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormMedia-list.aspx.designer.cs">
+      <DependentUpon>FormMedia-list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormModal.aspx.cs">
+      <DependentUpon>FormModal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormModal.aspx.designer.cs">
+      <DependentUpon>FormModal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormNavbar.aspx.cs">
+      <DependentUpon>FormNavbar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormNavbar.aspx.designer.cs">
+      <DependentUpon>FormNavbar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormNavTabs.aspx.cs">
+      <DependentUpon>FormNavTabs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormNavTabs.aspx.designer.cs">
+      <DependentUpon>FormNavTabs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormPagination.aspx.cs">
+      <DependentUpon>FormPagination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormPagination.aspx.designer.cs">
+      <DependentUpon>FormPagination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormPanel.aspx.cs">
+      <DependentUpon>FormPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormPanel.aspx.designer.cs">
+      <DependentUpon>FormPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormPopover.aspx.cs">
+      <DependentUpon>FormpoPover.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormPopover.aspx.designer.cs">
+      <DependentUpon>FormpoPover.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormTable.aspx.cs">
+      <DependentUpon>FormTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormTable.aspx.designer.cs">
+      <DependentUpon>FormTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormThumbnail.aspx.cs">
+      <DependentUpon>FormThumbnail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\FormThumbnail.aspx.designer.cs">
+      <DependentUpon>FormThumbnail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\V3\Switch\FormSwitch.aspx.cs">
+      <DependentUpon>FormSwitch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bootstrap\V3\Switch\FormSwitch.aspx.designer.cs">
+      <DependentUpon>FormSwitch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataTables\V1\DataTables-1.10.6\AjaxBaseTable.aspx.cs">
+      <DependentUpon>AjaxBaseTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataTables\V1\DataTables-1.10.6\AjaxBaseTable.aspx.designer.cs">
+      <DependentUpon>AjaxBaseTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataTables\V1\DataTables-1.10.6\BaseTable.aspx.cs">
+      <DependentUpon>BaseTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataTables\V1\DataTables-1.10.6\BaseTable.aspx.designer.cs">
+      <DependentUpon>BaseTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Jquery UI\1.11.2\FormDialog.aspx.cs">
+      <DependentUpon>FormDialog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jquery UI\1.11.2\FormDialog.aspx.designer.cs">
+      <DependentUpon>FormDialog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jquery UI\1.11.2\FormDialogTemplate.aspx.cs">
+      <DependentUpon>FormDialogTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jquery UI\1.11.2\FormDialogTemplate.aspx.designer.cs">
+      <DependentUpon>FormDialogTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jstree\V3\jstree-3.1.0\JsTreeIndex.aspx.cs">
+      <DependentUpon>JsTreeIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jstree\V3\jstree-3.1.0\JsTreeIndex.aspx.designer.cs">
+      <DependentUpon>JsTreeIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Interfaces\YanZhiwei.DotNet2.Interfaces.csproj">
+      <Project>{cd749b3d-29d3-4ae3-8acd-21210bc6e069}</Project>
+      <Name>YanZhiwei.DotNet2.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Utilities\YanZhiwei.DotNet2.Utilities.csproj">
+      <Project>{2868748d-6fec-4423-8254-bc366507c589}</Project>
+      <Name>YanZhiwei.DotNet2.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet3.5.Utilities\YanZhiwei.DotNet3.5.Utilities.csproj">
+      <Project>{fce5db97-96ec-4e53-bc19-eee6f2aa88e0}</Project>
+      <Name>YanZhiwei.DotNet3.5.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>46082</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:45890/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

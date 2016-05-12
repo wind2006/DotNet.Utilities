@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNet.Framework.Contract</name>
+    </assembly>
+    <members>
+        <member name="T:YanZhiwei.DotNet.Framework.Contract.AuditableAttribute">
+            <summary>
+            自定义日志属性
+            </summary>
+            时间：2016-01-14 10:54
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet.Framework.Contract.ISqlAuditable">
+            <summary>
+            基于Sql数据拦截接口
+            </summary>
+            时间：2016-03-30 11:12
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet.Framework.Contract.ISqlAuditable.WriteLog(System.Int32,System.String,System.String,System.DateTime)">
+            <summary>
+            写入日志
+            </summary>
+            <param name="userId">用户Id</param>
+            <param name="tableName">涉及表名称</param>
+            <param name="sql">添加，删除，修改拦截到sql语句</param>
+            <param name="optTime">操作时间</param>
+            时间：2016-03-30 11:11
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet.Framework.Contract.ServiceCallContext">
+            <summary>
+            服务调用上下文，主要传输IP，操作人，认证等数据，可用于WCF传输用
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.ServiceCallContext.Current">
+            <summary>
+            ServiceCallContext 数据槽
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.ServiceCallContext.Operater">
+            <summary>
+            操作者
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.ServiceCallContext.Item(System.String)">
+            <summary>
+            索引器
+            </summary>
+            <value>
+            The <see cref="T:System.Object"/>.
+            </value>
+            <param name="key">索引值</param>
+            <returns>object</returns>
+        </member>
+        <member name="T:YanZhiwei.DotNet.Framework.Contract.IAuditable">
+            <summary>
+            用于写数据修改，添加等历史日志
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Framework.Contract.IAuditable.WriteLog(System.Int32,System.String,System.String,System.String,System.String,YanZhiwei.DotNet.Framework.Contract.ModelBase)">
+            <summary>
+            写入日志
+            </summary>
+            <param name="modelId">模块Id</param>
+            <param name="userName">用户名称</param>
+            <param name="moduleName">模块名称</param>
+            <param name="tableName">表名称</param>
+            <param name="eventType">事件类型</param>
+            <param name="newValues">新的数值</param>
+            时间：2016-01-06 16:47
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet.Framework.Contract.ModelBase">
+            <summary>
+            实体类基类
+            </summary>
+            时间：2016-01-06 16:13
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet.Framework.Contract.ModelBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            时间：2016-01-06 16:13
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.ModelBase.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.ModelBase.ID">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.ModelBase.ModifyTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet.Framework.Contract.Operater">
+            <summary>
+            操作者
+            </summary>
+            时间：2016-01-13 17:19
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet.Framework.Contract.Operater.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            时间：2016-01-13 17:19
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.Operater.IP">
+            <summary>
+            访问Ip
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.Operater.Method">
+            <summary>
+            Method
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.Operater.Name">
+            <summary>
+            操作者
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.Operater.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.Operater.Token">
+            <summary>
+            凭据
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Contract.Operater.UserId">
+            <summary>
+            用户主键
+            </summary>
+        </member>
+    </members>
+</doc>

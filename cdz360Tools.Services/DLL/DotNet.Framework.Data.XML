@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNet.Framework.Data</name>
+    </assembly>
+    <members>
+        <member name="T:YanZhiwei.DotNet.Framework.Data.DbContextBase">
+            <summary>
+             DAL基类，通用数据访问模式
+            </summary>
+            时间：2016-03-30 11:15
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet.Framework.Data.DbContextBase.#ctor(System.String,System.Data.Common.DbProviderFactory,YanZhiwei.DotNet.Framework.Contract.ISqlAuditable)">
+            <summary>
+            初始化构造函数
+            </summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="dbProviderFactory">数据源提供实例</param>
+            <param name="auditLogger">数据添加，删除，修改拦截接口</param>
+            时间：2016-03-28 10:13
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet.Framework.Data.DbContextBase.#ctor(System.String)">
+            <summary>
+            初始化构造函数，默认Sql Server数据，不数据拦截
+            </summary>
+            <param name="connectionString">连接字符串</param>
+            时间：2016-03-28 10:14
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet.Framework.Data.DbContextBase.#ctor(System.String,YanZhiwei.DotNet.Framework.Contract.ISqlAuditable)">
+            <summary>
+            初始化构造函数，默认Sql Server数据
+            </summary>
+            <param name="connectionString">连接字符串</param>
+            <param name="auditLogger">数据添加，删除，修改拦截接口</param>
+            时间：2016-03-28 10:15
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet.Framework.Data.DbContextBase.AuditLogger">
+            <summary>
+            数据拦截接口
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet.Framework.Data.OperateState">
+            <summary>
+            数据库操作状态
+            </summary>
+            时间：2016-03-28 9:25
+            备注：
+        </member>
+        <member name="F:YanZhiwei.DotNet.Framework.Data.OperateState.Deleted">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet.Framework.Data.OperateState.Added">
+            <summary>
+            添加
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet.Framework.Data.OperateState.Modified">
+            <summary>
+            修改
+            </summary>
+        </member>
+        <member name="T:PetaPoco.Database.DataChangedHanlderEvent">
+            <summary>
+            数据添加，删除，修改时候委托
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="E:PetaPoco.Database.DataChangedEvent">
+            <summary>
+            数据添加，删除，修改的事件
+            </summary>
+        </member>
+        <member name="M:PetaPoco.Database.OnExecutedCommand(System.Data.IDbCommand,YanZhiwei.DotNet.Framework.Data.OperateState,System.Type,System.Int32)">
+            <summary>
+            用户数据拦截
+            </summary>
+            <param name="cmd">The command.</param>
+            <param name="operateState">State of the operate.</param>
+            <param name="effectCount">The effect count.</param>
+            时间：2016-03-28 9:39
+            备注：
+        </member>
+    </members>
+</doc>

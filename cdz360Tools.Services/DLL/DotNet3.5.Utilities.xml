@@ -1,0 +1,2261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNet3.5.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.AssemblyHelper">
+            <summary>
+            程序集反射辅助类
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AssemblyHelper.GetEntryAssembly">
+            <summary>
+            得到入口程序集，兼容Web和Winform
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AssemblyHelper.FindTypeByInheritType(System.Type,System.String)">
+            <summary>
+            扫描程序集找到继承了某基类的所有子类
+            </summary>
+            <param name="inheritType">基类</param>
+            <param name="searchpattern">文件名过滤</param>
+            <returns></returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AssemblyHelper.FindAllPropertyByAttribute``1(System.String)">
+            <summary>
+            扫描程序集找到带有某个Attribute的所有PropertyInfo
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="searchpattern">文件名过滤</param>
+            <returns></returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AssemblyHelper.FindAllTypeByAttribute``1(System.String)">
+            <summary>
+            扫描程序集找到类型上带有某个Attribute的所有类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="searchpattern">文件名过滤</param>
+            <returns></returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AssemblyHelper.FindTypeByInterface``1(System.String)">
+            <summary>
+            扫描程序集找到实现了某个接口的第一个实例
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="searchpattern">文件名过滤</param>
+            <returns></returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AssemblyHelper.GetBaseDirectory">
+            <summary>
+            得到当前应用程序的根目录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.FrameworkExceptionHelper">
+            <summary>
+            FrameworkException辅助类
+            </summary>
+            时间：2016-02-26 13:44
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.FrameworkExceptionHelper.ParseInnerDataToJsonString(YanZhiwei.DotNet2.Utilities.Core.FrameworkException)">
+            <summary>
+            将InnerException.Data转换为Json字符串
+            <para>不支持Data中Value是集合数组形式存储</para>
+            </summary>
+            <param name="frameworkException">FrameworkException</param>
+            <returns>Json字符串</returns>
+            时间：2016-02-26 13:19
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.GuidHelper">
+            <summary>
+            Guid帮助类
+            </summary>
+            时间：2016-01-11 9:20
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.GuidHelper.TryParse(System.String)">
+            <summary>
+            将Guid字符串转换为Guid
+            </summary>
+            <param name="guidString">字符串</param>
+            <returns>Guid</returns>
+            时间：2016-01-11 9:20
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.IDataReaderHelper">
+            <summary>
+            IDataReader 帮助类
+            </summary>
+            时间：2016-01-05 16:54
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.IDataReaderHelper.GetNullableBool(System.Data.IDataRecord,System.String)">
+            <summary>
+             从IDataReader获取值
+            </summary>
+            <param name="reader">IDataReader</param>
+            <param name="columnName">列名称</param>
+            <returns>T?</returns>
+            时间：2016-01-05 16:54
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.IDataReaderHelper.GetNullableByte(System.Data.IDataRecord,System.String)">
+            <summary>
+             从IDataReader获取值
+            </summary>
+            <param name="reader">IDataReader</param>
+            <param name="columnName">列名称</param>
+            <returns>T?</returns>
+            时间：2016-01-05 16:54
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.IDataReaderHelper.GetNullableDateTime(System.Data.IDataRecord,System.String)">
+            <summary>
+             从IDataReader获取值
+            </summary>
+            <param name="reader">IDataReader</param>
+            <param name="columnName">列名称</param>
+            <returns>T?</returns>
+            时间：2016-01-05 16:54
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.IDataReaderHelper.GetNullableDouble(System.Data.IDataRecord,System.String)">
+            <summary>
+             从IDataReader获取值
+            </summary>
+            <param name="reader">IDataReader</param>
+            <param name="columnName">列名称</param>
+            <returns>T?</returns>
+            时间：2016-01-05 16:54
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.IDataReaderHelper.GetNullableFloat(System.Data.IDataRecord,System.String)">
+            <summary>
+             从IDataReader获取值
+            </summary>
+            <param name="reader">IDataReader</param>
+            <param name="columnName">列名称</param>
+            <returns>T?</returns>
+            时间：2016-01-05 16:54
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.IDataReaderHelper.GetNullableInt16(System.Data.IDataRecord,System.String)">
+            <summary>
+             从IDataReader获取值
+            </summary>
+            <param name="reader">IDataReader</param>
+            <param name="columnName">列名称</param>
+            <returns>T?</returns>
+            时间：2016-01-05 16:54
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.IDataReaderHelper.GetNullableInt32(System.Data.IDataRecord,System.String)">
+            <summary>
+             从IDataReader获取值
+            </summary>
+            <param name="reader">IDataReader</param>
+            <param name="columnName">列名称</param>
+            <returns>T?</returns>
+            时间：2016-01-05 16:54
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.IDataReaderHelper.GetNullableString(System.Data.IDataRecord,System.String)">
+            <summary>
+            从IDataReader获取值
+            </summary>
+            <param name="reader">IDataReader</param>
+            <param name="columnName">列名称</param>
+            <returns>数值</returns>
+            时间：2016-01-05 16:51
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.IDataReaderHelper.GetValueOrNull``1(System.Data.IDataReader,System.String)">
+            <summary>
+             从IDataReader获取值
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="reader">IDataReader</param>
+            <param name="columnName">列名称</param>
+            <returns>T?</returns>
+            时间：2016-01-05 16:31
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.PageHelper">
+            <summary>
+            分页帮助类
+            </summary>
+            时间：2016-01-06 16:51
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.PageHelper.ToPagedList``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            转换为PagedList集合
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="allItems">IQueryable</param>
+            <param name="pageIndex">分页索引</param>
+            <param name="pageSize">分页大小</param>
+            <returns>PagedList集合</returns>
+            时间：2016-01-06 16:51
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.TypeHelper">
+            <summary>
+            类型<see cref="T:System.Type"/>辅助扩展方法类
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.TypeHelper.AttributeExists``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            检查指定指定类型成员中是否存在指定的Attribute特性
+            </summary>
+            <typeparam name="T">要检查的Attribute特性类型</typeparam>
+            <param name="memberInfo">要检查的类型成员</param>
+            <param name="inherit">是否从继承中查找</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.TypeHelper.GetAttribute``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            从类型成员获取指定Attribute特性
+            </summary>
+            <typeparam name="T">Attribute特性类型</typeparam>
+            <param name="memberInfo">类型类型成员</param>
+            <param name="inherit">是否从继承中查找</param>
+            <returns>存在返回第一个，不存在返回null</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.TypeHelper.GetAttributes``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            从类型成员获取指定Attribute特性
+            </summary>
+            <typeparam name="T">Attribute特性类型</typeparam>
+            <param name="memberInfo">类型类型成员</param>
+            <param name="inherit">是否从继承中查找</param>
+            <returns>返回所有指定Attribute特性的数组</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.TypeHelper.GetNonNummableType(System.Type)">
+            <summary>
+            由类型的Nullable类型返回实际类型
+            </summary>
+            <param name="type"> 要处理的类型对象 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.TypeHelper.GetUnNullableType(System.Type)">
+            <summary>
+            通过类型转换器获取Nullable类型的基础类型
+            </summary>
+            <param name="type"> 要处理的类型对象 </param>
+            <returns> </returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.TypeHelper.IsEnumerable(System.Type)">
+            <summary>
+            判断类型是否为集合类型
+            </summary>
+            <param name="type">要处理的类型</param>
+            <returns>是返回True，不是返回False</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.TypeHelper.IsGenericAssignableFrom(System.Type,System.Type)">
+            <summary>
+            判断当前泛型类型是否可由指定类型的实例填充
+            </summary>
+            <param name="genericType">泛型类型</param>
+            <param name="type">指定类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.TypeHelper.IsNullableType(System.Type)">
+            <summary>
+            判断类型是否为Nullable类型
+            </summary>
+            <param name="type"> 要处理的类型 </param>
+            <returns> 是返回True，不是返回False </returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.TypeHelper.ToDescription(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            获取成员元数据的Description特性描述信息
+            </summary>
+            <param name="member">成员元数据对象</param>
+            <param name="inherit">是否搜索成员的继承链以查找描述特性</param>
+            <returns>返回Description特性描述信息，如不存在则返回成员的名称</returns>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.WcfServiceProxy">
+            <summary>
+            Wcf帮助类
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.WcfServiceProxy.CreateServiceProxy``1(System.String)">
+            <summary>
+            动态创建Wcf客户端代理实例
+            </summary>
+            <typeparam name="T">Contract/接口</typeparam>
+            <param name="uri">Wcf服务地址</param>
+            <returns>代理实例</returns>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.AESEncryptHelper">
+            <summary>
+            AES加密
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.Common.AESEncryptHelper.aes">
+            <summary>
+            ASE对象
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AESEncryptHelper.#ctor(System.Byte[],System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">密钥.</param>
+            <param name="iv">向量.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AESEncryptHelper.CreateAES(System.String)">
+            <summary>
+            根据KEY生成DES
+            </summary>
+            <param name="key">密钥.</param>
+            <returns>Aes</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AESEncryptHelper.CreateAES">
+            <summary>
+            创建ASE加密对象
+            </summary>
+            <returns>Aes</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AESEncryptHelper.DecryptString(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="text">需要解密的字符串</param>
+            <returns>解密后字符串</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.AESEncryptHelper.EncryptString(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="text">需要加密的字符串</param>
+            <returns>加密后的字符串</returns>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.DistinctHelper">
+            <summary>
+            Distinct/去重复项 帮助类
+            </summary>
+            创建  人:言志伟
+            创建时间:2015-05-27 9:28
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.DistinctHelper.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1})">
+            <summary>
+            去重复
+            <para>
+            eg: Person[] _finded = _personList.Distinct'Person, string'(p => p.Name, StringComparer.InvariantCultureIgnoreCase).ToArray();
+            </para>
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <typeparam name="V">泛型</typeparam>
+            <param name="source">集合</param>
+            <param name="keySelector">选择器</param>
+            <returns></returns>
+            创建  人:言志伟
+            创建时间:2015-05-27 9:28
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.DistinctHelper.Distinct``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})">
+            <summary>
+            去重复
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <typeparam name="V">泛型</typeparam>
+            <param name="source">集合</param>
+            <param name="keySelector">选择器</param>
+            <param name="comparer">IEqualityComparer</param>
+            <returns></returns>
+            创建  人:言志伟
+            创建时间:2015-05-27 9:28
+            备注说明:<c>null</c>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.EnumerableHelper">
+            <summary>
+            Enumerable帮助类
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.EnumerableHelper.IsEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            判断IEnumerable是否是空
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="items">The items.</param>
+            <returns>是否为空</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.EnumerableHelper.NullToEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            如果等于NULL则返回默认初始化集合
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="source">集合</param>
+            <returns></returns>
+            时间：2015-12-15 14:39
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.EnumerableHelper.Split``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            根据设定的大小分割集合
+            <para>
+            eg: IEnumerable'IEnumerable'Person'' _acutal = _persons.Split(5);
+            </para>
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="source">集合</param>
+            <param name="size">分割大小</param>
+            <returns>分割后的集合</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.EnumerableHelper.ToHashSet``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            转换为HashSet
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="source">集合</param>
+            <returns>HashSet</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.EnumerableHelper.Traverse``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>
+            递归扩展
+            <para>
+            eg:List _findedList = allZtree.Traverse(n => n.children).Where(c => c.type == "Road").ToList();
+            </para>
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="source">集合</param>
+            <param name="fnRecurse">委托</param>
+            <returns>集合</returns>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.ExpressionHelper">
+            <summary>
+            Expression 帮助类
+            </summary>
+            创建  人:言志伟
+            创建时间:2015-05-26 13:50
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.ExpressionHelper.GetTPropertyName``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            获取属性名称
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <typeparam name="TProperty">属性</typeparam>
+            <param name="keySelector">选择器</param>
+            <returns></returns>
+            创建  人:言志伟
+            创建时间:2015-05-26 13:50
+            备注说明:<c>null</c>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.IPropertyChangedHelper">
+            <summary>
+            INotifyPropertyChanged 帮助类
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.IPropertyChangedHelper.NotifyPropertyChanged``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            属性更改通知到客户端
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <typeparam name="TProperty">泛型</typeparam>
+            <param name="source">类型，继承NotifyPropertyChanged</param>
+            <param name="keySelector">选择器；eg:this.NotifyPropertyChanged(p => p.Name);  </param>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.RecursiveJoinHelper">
+            <summary>
+            递归连接
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.RecursiveJoinHelper.RecursiveJoin``3(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``1},System.Func{``0,System.Collections.Generic.IEnumerable{``2},``2})">
+            <summary>
+            Recursives the join.
+            </summary>
+            <typeparam name="TSource">The type of the source.</typeparam>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="source">The source.</param>
+            <param name="parentKeySelector">The parent key selector.</param>
+            <param name="childKeySelector">The child key selector.</param>
+            <param name="resultSelector">The result selector.</param>
+            <returns>IEnumerable</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.RecursiveJoinHelper.RecursiveJoin``3(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``1},System.Func{``0,System.Int32,System.Collections.Generic.IEnumerable{``2},``2})">
+            <summary>
+            Recursives the join.
+            </summary>
+            <typeparam name="TSource">The type of the source.</typeparam>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="source">The source.</param>
+            <param name="parentKeySelector">The parent key selector.</param>
+            <param name="childKeySelector">The child key selector.</param>
+            <param name="resultSelector">The result selector.</param>
+            <returns>IEnumerable</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.RecursiveJoinHelper.RecursiveJoin``3(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``1},System.Func{``0,System.Collections.Generic.IEnumerable{``2},``2},System.Collections.Generic.IComparer{``1})">
+            <summary>
+            Recursives the join.
+            </summary>
+            <typeparam name="TSource">The type of the source.</typeparam>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="source">The source.</param>
+            <param name="parentKeySelector">The parent key selector.</param>
+            <param name="childKeySelector">The child key selector.</param>
+            <param name="resultSelector">The result selector.</param>
+            <param name="comparer">The comparer.</param>
+            <returns>IEnumerable</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.RecursiveJoinHelper.RecursiveJoin``3(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``1},System.Func{``0,System.Int32,System.Collections.Generic.IEnumerable{``2},``2},System.Collections.Generic.IComparer{``1})">
+            <summary>
+            Recursives the join.
+            </summary>
+            <typeparam name="TSource">The type of the source.</typeparam>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="source">The source.</param>
+            <param name="parentKeySelector">The parent key selector.</param>
+            <param name="childKeySelector">The child key selector.</param>
+            <param name="resultSelector">The result selector.</param>
+            <param name="comparer">The comparer.</param>
+            <returns>IEnumerable</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.RecursiveJoinHelper.RecursiveJoin``3(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``1},System.Func{``0,System.Int32,System.Int32,System.Collections.Generic.IEnumerable{``2},``2})">
+            <summary>
+            Recursives the join.
+            </summary>
+            <typeparam name="TSource">The type of the source.</typeparam>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="source">The source.</param>
+            <param name="parentKeySelector">The parent key selector.</param>
+            <param name="childKeySelector">The child key selector.</param>
+            <param name="resultSelector">The result selector.</param>
+            <returns>IEnumerable</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.RecursiveJoinHelper.RecursiveJoin``3(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Func{``0,``1},System.Func{``0,System.Int32,System.Int32,System.Collections.Generic.IEnumerable{``2},``2},System.Collections.Generic.IComparer{``1})">
+            <summary>
+            Recursives the join.
+            </summary>
+            <typeparam name="TSource">The type of the source.</typeparam>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="source">The source.</param>
+            <param name="parentKeySelector">The parent key selector.</param>
+            <param name="childKeySelector">The child key selector.</param>
+            <param name="resultSelector">The result selector.</param>
+            <param name="comparer">The comparer.</param>
+            <returns>IEnumerable</returns>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper">
+            <summary>
+            JavaScriptSerializer 帮助类
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.BinaryDeserialize(System.Byte[])">
+            <summary>
+            将使用二进制格式保存的byte数组反序列化成对象
+            </summary>
+            <param name="buffer">byte数组</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.BinarySerialize(System.Object)">
+            <summary>
+            将对象使用二进制格式序列化成byte数组
+            </summary>
+            <param name="obj">对象</param>
+            <returns>byte数组</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.DataContractDeserialize(System.Type,System.String)">
+            <summary>
+            利用DataContractSerializer反序列化
+            </summary>
+            <param name="type">The type.</param>
+            <param name="serializerString">字符串</param>
+            <returns>object</returns>
+            时间：2015-12-31 10:00
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.DataContractSerialize(System.Object)">
+            <summary>
+            利用DataContractSerializer对象序列化
+            </summary>
+            <param name="obj">对象</param>
+            <returns>字符串</returns>
+            时间：2015-12-31 9:59
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.JsonDeserialize(System.String)">
+            <summary>
+            利用JavaScriptSerializer将json字符串反序列化
+            </summary>
+            <param name="jsonString">Json字符串</param>
+            <returns>object</returns>
+            时间：2015-09-09 14:35
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.JsonDeserialize``1(System.String)">
+            <summary>
+            利用JavaScriptSerializer将json字符串反序列化.
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="jsonString">Json字符串</param>
+            <returns>object</returns>
+            时间：2016-01-14 11:24
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.JsonSerialize``1(System.Collections.Generic.IEnumerable{``0},System.Web.Script.Serialization.JavaScriptConverter[])">
+            <summary>
+            利用JavaScriptSerializer将对象序列化成JSON字符串
+            <para>eg:ScriptSerializerHelper.ToJson(_personList);</para>
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="entityList">集合</param>
+            <param name="scriptConverters">JavaScriptConverter</param>
+            <returns>Json字符串</returns>
+            时间：2015-09-09 14:34
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.JsonSerialize``1(``0)">
+            <summary>
+            将对象序列化Json字符串
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="entity">对象</param>
+            <returns>json</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.ParseJsonDateTime(System.String)">
+            <summary>
+            处理JsonString的时间格式问题【时间格式：yyyy-MM-dd HH:mm:ss】
+            <para>参考：http://www.cnphp6.com/archives/35773 </para>
+            </summary>
+            <param name="jsonString">Json字符串</param>
+            <returns>处理好的Json字符串</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.ParseJsonDateTime(System.String,System.String)">
+            <summary>
+            处理JsonString的时间格式问题
+            <para>eg:ScriptSerializerHelper.ConvertTimeJson(@"[{'getTime':'\/Date(1419564257428)\/'}]", "yyyyMMdd hh:mm:ss");==>[{'getTime':'20141226 11:24:17'}]</para>
+            <para>参考：http://www.cnphp6.com/archives/35773 </para>
+            </summary>
+            <param name="jsonString">Json字符串</param>
+            <param name="formart">时间格式化类型</param>
+            <returns>处理好的Json字符串</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.XmlDeserialize(System.Type,System.String)">
+            <summary>
+            XML字符串反序列化
+            </summary>
+            <param name="type">类型</param>
+            <param name="serializerString">XML字符串</param>
+            <returns>object</returns>
+            时间：2015-12-31 9:53
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.XmlSerialize``1(``0,System.String)">
+            <summary>
+            序列化，使用标准的XmlSerializer
+            不能序列化IDictionary接口.
+            </summary>
+            <param name="entity">对象</param>
+            <param name="filename">文件路径</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.XmlSerialize(System.Object)">
+            <summary>
+            序列化，使用标准的XmlSerializer
+            不能序列化IDictionary接口.
+            </summary>
+            <param name="obj">对象</param>
+            <returns>字符串</returns>
+            时间：2015-12-31 10:14
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.SerializationHelper.XmlSerialize(System.Object,System.Text.Encoding)">
+            <summary>
+            序列化，使用标准的XmlSerializer
+            不能序列化IDictionary接口.
+            </summary>
+            <param name="obj">对象</param>
+            <param name="ecoding">Encoding</param>
+            <returns>字符串</returns>
+            时间：2015-12-31 10:16
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.UserAgentHelper">
+            <summary>
+            UserAgent辅助操作类
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.UserAgentHelper.GetBrowserName(System.String)">
+            <summary>
+            根据 UserAgent 获取浏览器名称
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.UserAgentHelper.GetOperatingSystemName(System.String)">
+            <summary>
+            根据 UserAgent 获取操作系统名称
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Common.WhereIfHelper">
+            <summary>
+            WhereIf 帮助类
+            </summary>
+            创建  人:言志伟
+            创建时间:2015-05-27 10:05
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.WhereIfHelper.WhereIf``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.Func{``0,System.Boolean})">
+            <summary>
+            Wheres if.
+            <para>
+            eg: var _result = _students.WhereIf(!string.IsNullOrEmpty(_name), c => c.Name == _name)
+                                       .WhereIf(_age != 100, c => c.Age == _age).FirstOrDefault();
+            </para>
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="source">集合</param>
+            <param name="condition">成立条件</param>
+            <param name="keySelector">选择器</param>
+            <returns>集合</returns>
+            时间：2015-12-10 14:47
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Common.WhereIfHelper.WhereIfNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.Boolean})">
+            <summary>
+            当等于NULL或空的时候，执行选择器
+            <para>
+            eg: var _finded = PersonList.WhereIfNullOrEmpty(string.Empty, c => c.Name.Contains("yanzhiwei"));
+            </para>
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="source">集合</param>
+            <param name="condition">成立条件</param>
+            <param name="keySelector">成立条件</param>
+            <returns>集合</returns>
+            创建  人:言志伟
+            创建时间:2015-05-27 10:19
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionEvaluator.Nominator.Visit(System.Linq.Expressions.Expression)">
+            <summary>
+            Visits the specified expression.
+            </summary>
+            <param name="expression">The expression.</param>
+            <returns>Expression</returns>
+            时间：2016-01-08 10:02
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator">
+            <summary>
+            ExpressionTranslator
+            </summary>
+            时间：2016-01-08 9:53
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator"/> class.
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.OrderBy">
+            <summary>
+            Gets the order by.
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.Skip">
+            <summary>
+            Gets the skip.
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.Take">
+            <summary>
+            Gets the take.
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.WhereClause">
+            <summary>
+            Gets the where clause.
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.Translate(System.Linq.Expressions.Expression)">
+            <summary>
+            Translates the specified expression.
+            </summary>
+            <param name="expression">The expression.</param>
+            <returns>KeySelector表达式</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.IsNullConstant(System.Linq.Expressions.Expression)">
+            <summary>
+            Determines whether [is null constant] [the specified expression].
+            </summary>
+            <param name="expression">The expression.</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.VisitBinary(System.Linq.Expressions.BinaryExpression)">
+            <summary>
+            Visits the binary.
+            </summary>
+            <param name="expression">The expression.</param>
+            <returns>
+            Expression
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.VisitConstant(System.Linq.Expressions.ConstantExpression)">
+            <summary>
+            Visits the constant.
+            </summary>
+            <param name="expression">The expression.</param>
+            <returns>
+            Expression
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.VisitMember(System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Visits the member.
+            </summary>
+            <param name="expression">The expression.</param>
+            <returns>
+            Expression
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.VisitMethodCall(System.Linq.Expressions.MethodCallExpression)">
+            <summary>
+            Visits the method call.
+            </summary>
+            <param name="expression">The expression.</param>
+            <returns>
+            Expression
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ExpressionTranslator.VisitUnary(System.Linq.Expressions.UnaryExpression)">
+            <summary>
+            Visits the unary.
+            </summary>
+            <param name="expression">The expression.</param>
+            <returns>
+            Expression
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Core.Locker">
+            <summary>
+            对象锁辅助类
+            </summary>
+            时间：2016-02-25 15:03
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Locker.RemovedExired">
+            <summary>
+            移除所有锁
+            </summary>
+            时间：2016-02-25 15:04
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Locker.Run(System.String,System.Action)">
+            <summary>
+            运行
+            </summary>
+            <param name="key">键</param>
+            <param name="action">委托</param>
+            时间：2016-02-25 15:03
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Core.CommonEqualityComparer`2">
+            <summary>
+            定义方法以支持对象的相等比较
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="V"></typeparam>
+            创建  人:言志伟
+            创建时间:2015-05-27 9:23
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.CommonEqualityComparer`2.#ctor(System.Func{`0,`1},System.Collections.Generic.IEqualityComparer{`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:YanZhiwei.DotNet3._5.Utilities.Core.CommonEqualityComparer`2"/> class.
+            </summary>
+            <param name="keySelector">The key selector.</param>
+            <param name="comparer">The comparer.</param>
+            时间：2015-12-10 14:50
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.CommonEqualityComparer`2.#ctor(System.Func{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:YanZhiwei.DotNet3._5.Utilities.Core.CommonEqualityComparer`2"/> class.
+            </summary>
+            <param name="keySelector">The key selector.</param>
+            时间：2015-12-10 14:50
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.CommonEqualityComparer`2.Equals(`0,`0)">
+            <summary>
+            Equalses the specified x.
+            </summary>
+            <param name="x">The x.</param>
+            <param name="y">The y.</param>
+            <returns></returns>
+            时间：2015-12-10 14:50
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.CommonEqualityComparer`2.GetHashCode(`0)">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+            时间：2015-12-10 14:50
+            作者：言志伟
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Core.ScriptConverter.DateTimeConverter">
+            <summary>
+            时间类型转换器
+            </summary>
+            时间：2015-12-10 14:48
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ScriptConverter.DateTimeConverter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:YanZhiwei.DotNet3._5.Utilities.Core.ScriptConverter.DateTimeConverter"/> class.
+            </summary>
+            时间：2015-12-10 14:49
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ScriptConverter.DateTimeConverter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:YanZhiwei.DotNet3._5.Utilities.Core.ScriptConverter.DateTimeConverter"/> class.
+            </summary>
+            <param name="customFormat">The custom format.</param>
+            时间：2015-12-10 14:49
+            作者：言志伟
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.ScriptConverter.DateTimeConverter.SupportedTypes">
+            <summary>
+            When overridden in a derived class, gets a collection of the supported types.
+            </summary>
+            时间：2015-12-10 14:49
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ScriptConverter.DateTimeConverter.Deserialize(System.Collections.Generic.IDictionary{System.String,System.Object},System.Type,System.Web.Script.Serialization.JavaScriptSerializer)">
+            <summary>
+            Deserializes the specified dictionary.
+            </summary>
+            <param name="dictionary">The dictionary.</param>
+            <param name="type">The type.</param>
+            <param name="serializer">The serializer.</param>
+            <returns></returns>
+            时间：2015-12-10 14:49
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.ScriptConverter.DateTimeConverter.Serialize(System.Object,System.Web.Script.Serialization.JavaScriptSerializer)">
+            <summary>
+            Serializes the specified object.
+            </summary>
+            <param name="obj">The object.</param>
+            <param name="serializer">The serializer.</param>
+            <returns></returns>
+            时间：2015-12-10 14:49
+            作者：言志伟
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Core.Job">
+            <summary>
+            任务帮助类
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.Core.Job.execTask">
+            <summary>
+            TimerCallback 对象
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.Core.Job.lastExecuteTime">
+            <summary>
+            上次执行时间
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.Core.Job.nextExecuteTime">
+            <summary>
+            下次执行时间
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.Core.Job.schedule">
+            <summary>
+            ISchedule 对象
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.Core.Job.taskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.Core.Job.timer">
+            <summary>
+            Timer 对象
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Job.#ctor(System.Threading.TimerCallback,YanZhiwei.DotNet3._5.Interfaces.ISchedule,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="callback">一个TimerCallback 委托，表示要执行的方法.</param>
+            <param name="schedule">为每个任务制定一个执行计划</param>
+            <param name="taskName">任务名称</param>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.Job.LastExecuteTime">
+            <summary>
+            该任务最后一次执行的时间
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.Job.Name">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.Job.NextExecuteTime">
+            <summary>
+            任务下执行时间
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.Job.Shedule">
+            <summary>
+            执行任务的计划
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Job.Close">
+            <summary>
+            销毁任务
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Job.Dispose">
+            <summary>
+            执行与释放或重置非托管资源相关的应用程序定义的任务。
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Job.RefreshSchedule">
+            <summary>
+            刷新任务计划
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Job.Start">
+            <summary>
+            开始任务
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Job.Start(System.Object)">
+            <summary>
+            开始任务
+            </summary>
+            <param name="execTaskState">回调参数</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Job.Stop">
+            <summary>
+            停止任务
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Job.ToString">
+            <summary>
+            ToString--返回任务名称
+            </summary>
+            <returns>任务名称</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.Job.Execute(System.Object)">
+            <summary>
+            执行任务
+            </summary>
+            <param name="state">任务函数参数</param>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Core.JobScheduler">
+            <summary>
+            任务管理中心
+            使用它可以管理一个或则多个同时运行的任务
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.Core.JobScheduler.taskScheduler">
+            <summary>
+            任务线程安全集合
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.JobScheduler.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.JobScheduler.Count">
+            <summary>
+            任务总数
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.JobScheduler.DeRegister(YanZhiwei.DotNet3._5.Utilities.Core.Job)">
+            <summary>
+            移除任务
+            </summary>
+            <param name="task">Task</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.JobScheduler.Find(System.String)">
+            <summary>
+            查找任务
+            </summary>
+            <param name="name">任务名称</param>
+            <returns>Task</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.JobScheduler.GetEnumerator">
+            <summary>
+            Gets the enumerator.
+            </summary>
+            <returns>IEnumerator</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.JobScheduler.Register(YanZhiwei.DotNet3._5.Utilities.Core.Job)">
+            <summary>
+            注册任务
+            </summary>
+            <param name="task">Task</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.JobScheduler.TerminateAllTask">
+            <summary>
+            终止任务
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.CycExecution">
+            <summary>
+            周期性的执行计划
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.CycExecution.#ctor(System.TimeSpan)">
+            <summary>
+            构造函数,马上开始运行
+            </summary>
+            <param name="period">周期时间</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.CycExecution.#ctor(System.DateTime,System.TimeSpan)">
+            <summary>
+            构造函数，在一个将来时间开始运行
+            </summary>
+            <param name="shedule">计划执行的时间</param>
+            <param name="period">周期时间</param>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.CycExecution.DueTime">
+            <summary>
+             该计划还有多久才能运行[毫秒]
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.CycExecution.ExecutionTime">
+            <summary>
+            计划执行时间
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.CycExecution.Period">
+            <summary>
+            周期[毫秒]
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.ImmediateExecution">
+            <summary>
+            计划立即执行任务
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.ImmediateExecution.DueTime">
+            <summary>
+            该计划还有多久才能运行[毫秒]
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.ImmediateExecution.ExecutionTime">
+            <summary>
+            任务执行时间
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.ImmediateExecution.Period">
+            <summary>
+            周期[毫秒]
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.ScheduleExecutionOnce">
+            <summary>
+            计划在某一未来的时间执行一个操作一次，如果这个时间比现在的时间小，就变成了立即执行的方式
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.ScheduleExecutionOnce.#ctor(System.DateTime)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="time">计划开始执行的时间</param>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.ScheduleExecutionOnce.DueTime">
+            <summary>
+             该计划还有多久才能运行[毫秒]
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.ScheduleExecutionOnce.ExecutionTime">
+            <summary>
+            计划执行时间
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Core.SchedulerType.ScheduleExecutionOnce.Period">
+            <summary>
+            计划周期[毫秒]
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Core.NotifyPropertyChanged">
+            <summary>
+            向客户端发出某一属性值已更改的通知。
+            </summary>
+        </member>
+        <member name="E:YanZhiwei.DotNet3._5.Utilities.Core.NotifyPropertyChanged.PropertyChanged">
+            <summary>
+            向客户端发出某一属性值已更改的通知事件
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Core.NotifyPropertyChanged.NotifyChanged(System.String)">
+            <summary>
+            需要向客户端通知的属性名称
+            </summary>
+            <param name="propertyName">属性名称</param>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Enums.UploadFileSaveType">
+            <summary>
+            路径存储类型
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.Enums.UploadFileSaveType.DateTimeNow">
+            <summary>
+            根据时间创建存储目录
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.Enums.UploadFileSaveType.Code">
+            <summary>
+            根据ID编号方式来创建存储目录
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Model.DataTablePageResult">
+            <summary>
+            Jquery DataTable分页结果集
+            </summary>
+            时间：2016-04-19 16:12
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.DataTablePageResult.iTotalRecords">
+            <summary>
+            实际的行数
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.DataTablePageResult.iTotalDisplayRecords">
+            <summary>
+            过滤之后，实际的行数。
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.DataTablePageResult.aaData">
+            <summary>
+            数组的数组，表格中的实际数据。
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.DataTablePageResult.ExecuteMessage">
+            <summary>
+            错误提示消息
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.DataTablePageResult.ExecuteState">
+            <summary>
+            执行状态
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileMessage">
+            <summary>
+            上传返回信息
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileMessage.HasError">
+            <summary>
+            上传错误
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileMessage.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileMessage.FilePath">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileMessage.WebFilePath">
+            <summary>
+            网站路径
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileMessage.FileName">
+            <summary>
+            获取文件名
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileConfig">
+            <summary>
+            文件上传参数配置
+            </summary>
+            时间：2015-12-17 11:11
+            作者：言志伟
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileConfig.FileDirectory">
+            <summary>
+            文件保存路径
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileConfig.FileType">
+            <summary>
+            允许上传的文件类型, 逗号分割,必须全部小写!
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileConfig.MaxSizeM">
+            <summary>
+            允许上传多少大小
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileConfig.PathSaveType">
+            <summary>
+            路径存储类型
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileConfig.IsRenameSameFile">
+            <summary>
+            重命名同名文件?
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadFileConfig.IsUseOldFileName">
+            <summary>
+            是否使用原始文件名
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage">
+            <summary>
+            上传图片返回信息
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage.Directory">
+            <summary>
+            图片目录
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage.FileName">
+            <summary>
+            图片名
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage.FilePath">
+            <summary>
+            文件物理路径
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage.IsError">
+            <summary>
+            是否遇到错误
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage.Message">
+            <summary>
+            反回消息
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage.Size">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage.WebPath">
+            <summary>
+            web路径
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage.SmallPath(System.Int32)">
+            <summary>
+            缩略图路径
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.Model.JsonResult">
+            <summary>
+            Json
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.JsonResult.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.Model.JsonResult.StatusCode">
+            <summary>
+            eg：System.Net.HttpStatusCode.BadRequest
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1">
+            <summary>
+            cookie 辅助类
+            </summary>
+            <typeparam name="T"></typeparam>
+            时间：2015-12-18 11:33
+            作者：言志伟
+            备注：
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.lockObj">
+            <summary>
+            锁对象
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.instance">
+            <summary>
+            CookiesManager实例
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.Item(System.String)">
+            <summary>
+            索引取值
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.GetInstance">
+            <summary>
+            获取实例 （单例模式）
+            </summary>
+            <returns>CookiesManager</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.Add(System.String,`0)">
+            <summary>
+            添加cookies ,注意value最大4K (默认1天)
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.Add(System.String,`0,System.Int32)">
+            <summary>
+            添加cookies ,注意value最大4K
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="cookiesDurationInSeconds">有效时间单位秒</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.ContainsKey(System.String)">
+            <summary>
+            是否包含该键
+            </summary>
+            <param name="key">键</param>
+            <returns>是否包含</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.Get(System.String)">
+            <summary>
+            按键取值
+            </summary>
+            <param name="key">键</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.GetAllKey">
+            <summary>
+            获取所有键集合
+            </summary>
+            <returns>集合</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.Remove(System.String)">
+            <summary>
+            按键移除
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.RemoveAll">
+            <summary>
+            移除所有
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.RemoveAll(System.Func{System.String,System.Boolean})">
+            <summary>
+            移除所有
+            </summary>
+            <param name="keySelector">选择器</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.CookiesManager`1.Add(System.String,System.Int32,System.Web.HttpCookie,System.String,System.Web.HttpResponse)">
+            <summary>
+            添加
+            </summary>
+            <param name="key">键</param>
+            <param name="cookiesDurationInSeconds">过期时间，单位秒</param>
+            <param name="cookie">HttpCookie</param>
+            <param name="setValue">值</param>
+            <param name="response">HttpResponse</param>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1">
+            <summary>
+            Form验证帮助类
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            时间：2015-12-10 11:30
+            作者：言志伟
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.#ctor(System.Web.Security.FormsAuthenticationTicket,`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="ticket">The ticket.</param>
+            <param name="userData">The user data.</param>
+            时间：2015-12-10 11:30
+            作者：言志伟
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.Identity">
+            <summary>
+            获取当前用户的标识。
+            </summary>
+            时间：2015-12-10 11:31
+            作者：言志伟
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.UserData">
+            <summary>
+            用户数据
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.AddPermission(System.String[])">
+            <summary>
+            用户权限初始化 在 Application_AuthenticateRequest()中使用
+            </summary>
+            <param name="roles">委托</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.GetCookieTimeout">
+            <summary>
+            获取web.config中cookie超时时间，若获取失败，则返回-1
+            </summary>
+            <returns></returns>
+            创建  人:言志伟
+            创建时间:2015-06-18 16:11
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.ParsePrincipal">
+            <summary>
+            Parses the principal.
+            </summary>
+            <returns></returns>
+            创建  人:言志伟
+            创建时间:2015-06-18 16:17
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.ParsePrincipal(System.Action{System.Exception})">
+            <summary>
+            Parses the principal.
+            </summary>
+            <param name="excepHanlder">The excep hanlder.</param>
+            <returns></returns>
+            创建  人:言志伟
+            创建时间:2015-06-18 16:17
+            备注说明:<c>null</c>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.Redirect">
+            <summary>
+            根据ReturnUrl来页面跳转
+            </summary>
+            创建  人:言志伟
+            创建时间:2015-06-18 17:22
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.RedirectDefaultPage(System.String,System.Boolean)">
+            <summary>
+            跳转到web.config中defaultUrl配置连接
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="persistentCookie">if set to <c>true</c> [persistent cookie].</param>
+            创建  人:言志伟
+            创建时间:2015-06-18 17:22
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.RedirectDefaultPage(System.String)">
+            <summary>
+            跳转到web.config中defaultUrl配置连接
+            </summary>
+            <param name="userName">Name of the user.</param>
+            创建  人:言志伟
+            创建时间:2015-06-18 17:23
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.SetUserInfo">
+            <summary>
+            根据HttpContext对象设置用户标识对象
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.SignIn(System.String,`0,System.Int32,System.Boolean)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="userName">用户名称</param>
+            <param name="userData">用户数据</param>
+            <param name="expiration">过期时间，单位：分钟.</param>
+            <param name="persistentCookie">是否是持久cookie</param>
+            创建  人:言志伟
+            创建时间:2015-06-18 14:58
+            备注说明:<c>null</c>
+            <exception cref="T:System.InvalidOperationException">HttpContext==null</exception>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.SignIn(System.String,`0,System.Int32)">
+            <summary>
+            用户登录
+            <para>说明：默认持久cookie</para>
+            </summary>
+            <param name="userName">用户名称</param>
+            <param name="userData">用户数据</param>
+            <param name="expiration">过期时间，单位：分钟.</param>
+            创建  人:言志伟
+            创建时间:2015-06-18 15:04
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.SignIn(System.String,`0)">
+            <summary>
+            用户登录
+            <para>说明：默认持久cookie，回话超时20分钟</para>
+            </summary>
+            <param name="userName">用户名称</param>
+            <param name="userData">用户数据</param>
+            创建  人:言志伟
+            创建时间:2015-06-18 15:06
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.SignOut">
+            <summary>
+            登出
+            </summary>
+            创建  人:言志伟
+            创建时间:2015-06-18 15:09
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.FormsPrincipal`1.IsInRole(System.String)">
+            <summary>
+            用户是否在角色里面
+            </summary>
+            <param name="role">角色名称</param>
+            <returns>
+            true if the current principal is a member of the specified role; otherwise, false.
+            </returns>
+            创建  人:言志伟
+            创建时间:2015-06-18 16:07
+            备注说明:<c>null</c>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode">
+            <summary>
+            验证码类
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetAddLowerLetter">
+            <summary>
+            是否加入小写字母
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetAddUpperLetter">
+            <summary>
+            是否加入大写字母
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetBackgroundColor">
+            <summary>
+            背景色
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetFontColor">
+            <summary>
+             字体颜色
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetFontFamily">
+            <summary>
+            字体类型
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetFontSize">
+            <summary>
+            字体大小
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetForeNoisePointCount">
+            <summary>
+            前景噪点数量
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetIsRandomColor">
+            <summary>
+            是否随机字体颜色
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetLength">
+            <summary>
+            验证码长度
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetRandomAngle">
+            <summary>
+            随机码的旋转角度
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetVerifyCodeText">
+            <summary>
+            验证码字符串
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetHeight">
+            <summary>
+            图片高度
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.SetWith">
+            <summary>
+            图片宽度
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.GetQuestion(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            获取问题
+            </summary>
+            <param name="questionList">默认数字加减验证</param>
+            <returns>返回随机问题</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.OutputImage(System.Web.HttpResponse)">
+            <summary>
+            输出验证码图片
+            </summary>
+            <param name="objHttpResponse">Http响应实例</param>
+            <returns>输出是否成功</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.AddBackgroundNoisePoint(System.Drawing.Bitmap,System.Drawing.Graphics)">
+            <summary>
+            添加背景噪点
+            </summary>
+            <param name="objBitmap">Bitmap</param>
+            <param name="objGraphics">Graphics</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.AddForeNoisePoint(System.Drawing.Bitmap)">
+            <summary>
+            添加前景噪点
+            </summary>
+            <param name="objBitmap"></param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.GetRandomColor">
+            <summary>
+            获取随机颜色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.GetVerifyCodeImage">
+            <summary>
+            得到验证码图片
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.VerificationCode.GetVerifyCodeText">
+            <summary>
+            得到验证码字符串
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile">
+            <summary>
+            单文件上传
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            时间：2015-12-17 11:13
+            作者：言志伟
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.folderNumber">
+            <summary>
+            若以文件夹编号命名的时候，采用编号
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.Save(System.Web.HttpPostedFile)">
+            <summary>
+            保存表单文件
+            </summary>
+            <param name="postFile">HttpPostedFile</param>
+            <returns>上传返回信息</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.Save(System.Web.HttpPostedFile,System.String)">
+            <summary>
+            保存表单文件,根据编号创建子文件夹
+            </summary>
+            <param name="postFile">HttpPostedFile</param>
+            <param name="number">编号</param>
+            <returns>上传返回信息</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.SetFileDirectory(System.String)">
+            <summary>
+            文件保存路径(默认:/upload)
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.SetFileType(System.String)">
+            <summary>
+            允许上传的文件类型, 逗号分割,必须全部小写! *表示所有 (默认值: .pdf,.xls,.xlsx,.doc,.docx,.txt,.png,.jpg,.gif )
+            </summary>
+            <param name="fileType">允许上传文件类型</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.SetIsRenameSameFile(System.Boolean)">
+            <summary>
+            重命名同名文件？
+            </summary>
+            <param name="isRenameSameFile">true:重命名,false覆盖</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.SetIsUseOldFileName(System.Boolean)">
+            <summary>
+            是否使用原始文件名作为新文件的文件名(默认:true)
+            </summary>
+            <param name="isUseOldFileName">true原始文件名,false系统生成新文件名</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.SetMaxSizeM(System.Double)">
+            <summary>
+            允许上传多少大小(单位：M)
+            </summary>
+            <param name="maxSizeM">(单位：M)</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.GetRelativePath(System.String)">
+            <summary>
+            根据物理路径获取相对路径
+            </summary>
+            <param name="fileDirectory">文件夹名称</param>
+            <returns>相对路径</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.CheckingType(YanZhiwei.DotNet3._5.Utilities.Model.UploadFileMessage,System.String)">
+            <summary>
+            验证文件类型
+            </summary>
+            <param name="message">上传返回信息.</param>
+            <param name="fileName">文件名称.</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.CheckSize(YanZhiwei.DotNet3._5.Utilities.Model.UploadFileMessage,System.Web.HttpPostedFile)">
+            <summary>
+            检查文件大小
+            </summary>
+            <param name="message">上传返回信息</param>
+            <param name="postFile">HttpPostedFile</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.CommonSave(System.Web.HttpPostedFile)">
+            <summary>
+            保存表单文件,根据HttpPostedFile
+            </summary>
+            <param name="postFile">HttpPostedFile</param>
+            <returns>上传返回信息</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.GetDirectory(System.String@)">
+            <summary>
+            获取目录
+            </summary>
+            <param name="webDir">网络目录名称</param>
+            <returns>目录</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadFile.AddUploadFileMessage(YanZhiwei.DotNet3._5.Utilities.Model.UploadFileMessage,System.String)">
+            <summary>
+            抛出错误
+            </summary>
+            <param name="message">上传返回信息</param>
+            <param name="msg">错误消息</param>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage">
+            <summary>
+            ASP.NET 图片上传
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetAllowFormat">
+            <summary>
+            允许图片格式
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetAllowSize">
+            <summary>
+            允许上传图片大小
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetCutImage">
+            <summary>
+            是否剪裁图片，默认true
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetLimitWidth">
+            <summary>
+            是否限制最大宽度，默认为true
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetMaxWidth">
+            <summary>
+            最大宽度尺寸，默认为600
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetMinWidth">
+            <summary>
+            限制图片最小宽度，0表示不限制
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetPicWater">
+            <summary>
+            图片水印
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetPositionWater">
+            <summary>
+            水印图片的位置 0居中、1左上角、2右上角、3左下角、4右下角
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetSmallImgHeight">
+            <summary>
+            缩略图高度多个逗号格开（例如:200,100）
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetSmallImgWidth">
+            <summary>
+            缩略图宽度多个逗号格开（例如:200,100）
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.SetWordWater">
+            <summary>
+            文字水印字符
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.FileCutSaveAs(System.Web.HttpPostedFile,System.String,System.Int32,System.Int32,YanZhiwei.DotNet2.Utilities.Enums.ImageCutMode)">
+            <summary>
+            裁剪图片
+            </summary>
+            <param name="postedFile">HttpPostedFile控件</param>
+            <param name="savePath">保存路径</param>
+            <param name="imgWidth">图片宽度</param>
+            <param name="imgHeight">图片高度</param>
+            <param name="cMode">剪切类型</param>
+            <returns>返回上传信息</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.FileSaveAs(System.Web.HttpPostedFile,System.String)">
+            <summary>
+            通用图片上传类
+            </summary>
+            <param name="postedFile">HttpPostedFile控件</param>
+            <param name="savePath">保存路径</param>
+            <returns>返回上传信息</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.AddUploadImageMessage(YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage,System.Int32)">
+            <summary>
+            增加上传错误信息
+            </summary>
+            <param name="rm">UploadImageMessage</param>
+            <param name="code">错误代码</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.AddUploadImageMessage(YanZhiwei.DotNet3._5.Utilities.Model.UploadImageMessage,System.String)">
+            <summary>
+            增加上传错误信息
+            </summary>
+            <param name="rm">UploadImageMessage</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebUploadImage.GetCodeMessage(System.Int32)">
+            <summary>
+            图片上传错误编码
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest">
+            <summary>
+            模拟Get，Post请求
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.accept">
+            <summary>
+            accept
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.allowAutoRedirect">
+            <summary>
+            是否允许重定向
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.contentType">
+            <summary>
+            contentType
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.cookie">
+            <summary>
+            设置cookie
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.time">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.GetResponseImage(System.String)">
+            <summary>
+            获得响应中的图像
+            </summary>
+            <param name="url">链接</param>
+            <returns>若发生异常则返回NULL</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.HttpGet(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            get请求获取返回的html
+            </summary>
+            <param name="url">无参URL</param>
+            <param name="querydata">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.HttpGet(System.String)">
+            <summary>
+            get请求获取返回的html
+            </summary>
+            <param name="url">链接</param>
+            <returns>html</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.HttpPost(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            post请求返回html
+            </summary>
+            <param name="url">连接</param>
+            <param name="postParamters">参数</param>
+            <returns>html</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.HttpUploadFile(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            POST文件
+            </summary>
+            <param name="url">链接</param>
+            <param name="file">文件路径</param>
+            <param name="postParamters"></param>
+            <returns>Html</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.HttpUploadFile(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding)">
+            <summary>
+            POST文件
+            </summary>
+            <param name="url">链接</param>
+            <param name="file">文件路径</param>
+            <param name="postParamters">参数</param>
+            <param name="encoding">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.HttpUploadFile(System.String,System.String[],System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            POST文件
+            </summary>
+            <param name="url">链接</param>
+            <param name="files">文件路径</param>
+            <param name="postParamters">参数</param>
+            <returns>Html</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.HttpUploadFile(System.String,System.String[],System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding)">
+            <summary>
+            POST文件
+            </summary>
+            <param name="url">链接</param>
+            <param name="files">文件路径</param>
+            <param name="postParamters">参数</param>
+            <param name="encoding">编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.SetAccept(System.String)">
+            <summary>
+            设置accept(默认:*/*)
+            </summary>
+            <param name="accept"></param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.SetContentType(System.String)">
+            <summary>
+            设置contentType(默认:application/x-www-form-urlencoded)
+            </summary>
+            <param name="contentType"></param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.SetCookie(System.Net.CookieContainer)">
+            <summary>
+            设置Cookie
+            </summary>
+            <param name="cookie"></param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.SetIsAllowAutoRedirect(System.Boolean)">
+            <summary>
+            是否允许重定向(默认:true)
+            </summary>
+            <param name="allowAutoRedirect"></param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.SetTimeOut(System.Int32)">
+            <summary>
+            设置请求过期时间（单位：毫秒）（默认：5000）
+            </summary>
+            <param name="time"></param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Core.WebRequest.RemoteCertificateValidate(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            远程证书验证，固定返回true
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WebForm.HandlerHelper">
+            <summary>
+            HttpHandler帮助类
+            </summary>
+            创建  人:言志伟
+            创建时间:2015-06-08 11:46
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.HandlerHelper.CreateFilePath(System.Web.HttpContext,System.String)">
+            <summary>
+            创建文件全路径
+            <para>eg: context.CreateFilePath("images/1616/LampGroup/lampGroup.jpg")</para>
+            </summary>
+            <param name="context">The context.</param>
+            <param name="file">The file.eg:"images/1616/LampGroup/lampGroup.jpg"</param>
+            <returns></returns>
+            创建  人:言志伟
+            创建时间:2015-06-09 11:15
+            备注说明:<c>null</c>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.HandlerHelper.CreateResponse(System.Web.HttpContext,System.Object,System.Net.HttpStatusCode)">
+            <summary>
+            创建Response响应
+            <para>eg:context.CreateResponse(_zNodeList, HttpStatusCode.OK);</para>
+            </summary>
+            <param name="context">The context.</param>
+            <param name="obj">The object.</param>
+            <param name="statusCode">The status code.</param>
+            创建  人:言志伟
+            创建时间:2015-06-08 11:46
+            备注说明:<c>null</c>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WebForm.Jquery.DataTableHelper">
+            <summary>
+            Jquery DataTables帮助类
+            </summary>
+            时间：2016-04-19 16:04
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.Jquery.DataTableHelper.ExecutePageQuery``1(System.Web.HttpContext,System.Func{System.Int32,System.Int32,System.Int32,System.String,YanZhiwei.DotNet3._5.Utilities.Model.DataTablePageResult})">
+            <summary>
+            数据分页
+            </summary>
+            <param name="context">HttpContext</param>
+            <param name="getDataFactory">委托，顺位输入参数：1.用于指定一屏显示的条数，需开启分页器;2.用于指定从哪一条数据开始显示到表格中去，3.排序列索引;4.升序还是降序，返回DataTablePageResult</param>
+            时间：2016-04-19 16:35
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WebForm.UrlHelper">
+            <summary>
+            URL帮助类
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WebForm.UrlHelper.SetQueryString(System.String,System.Object)">
+            <summary>
+            在url里添加参数，并返回添加后的url
+            </summary>
+            <param name="name">键</param>
+            <param name="value">值</param>
+            <returns>更新后链接</returns>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WPF.ControlHelper">
+            <summary>
+            Control 帮助类
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.ControlHelper.FullScreen(System.Windows.Window)">
+            <summary>
+            窗体全屏
+            eg:MetroWindow_Loaded事件中使用
+            </summary>
+            <param name="windows">Window</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.ControlHelper.SetHeightAuto``1(``0)">
+            <summary>
+            将WPF控件告诉设置为auto
+            </summary>
+            <typeparam name="T">控件泛型</typeparam>
+            <param name="t">控件</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.ControlHelper.SetWidthAuto``1(``0)">
+            <summary>
+            将WPF控件宽度设置为auto【线程安全】
+            </summary>
+            <typeparam name="T">控件泛型</typeparam>
+            <param name="t">控件</param>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper">
+            <summary>
+            Dispatcher帮助类
+            参考
+            http://blog.decarufel.net/2009/03/good-practice-to-use-dispatcher-in-wpf-background-thread.html
+            http://msdn.microsoft.com/zh-tw/magazine/cc163328.aspx
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper.Dispatch``1(System.Windows.Threading.DispatcherObject,System.Func{``0})">
+            <summary>
+            Dispatch
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper.Dispatch``2(``0,System.Func{``0,``1})">
+            <summary>
+            Dispatch
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper.Dispatch``3(``0,System.Func{``0,``1,``2},``1)">
+            <summary>
+            Dispatch
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper.Dispatch``4(``0,System.Func{``0,``1,``2,``3},``1,``2)">
+            <summary>
+            Dispatch
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper.Dispatch``5(``0,System.Func{``0,``1,``2,``3,``4},``1,``2,``3)">
+            <summary>
+            Dispatch
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper.Dispatch(System.Windows.Threading.DispatcherObject,System.Action)">
+            <summary>
+            Dispatch
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper.Dispatch``1(``0,System.Action{``0})">
+            <summary>
+            Dispatch
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper.Dispatch``2(``0,System.Action{``0,``1},``1)">
+            <summary>
+            Dispatch
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper.Dispatch``3(``0,System.Action{``0,``1,``2},``1,``2)">
+            <summary>
+            Dispatch
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Utilities.WPF.DispatcherHelper.Dispatch``4(``0,System.Action{``0,``1,``2,``3},``1,``2,``3)">
+            <summary>
+            Dispatch
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,8 @@
+°²×°£ºTopshelfDemo.exe install
+Æô¶¯£ºTopshelfDemo.exe start
+Ð¶ÔØ£ºTopshelfDemo.exe uninstall
+
+C:\Windows\System32\cmd.exe
+D:\Debug\ConsoleApplication13.exe install
+D:\Debug\ConsoleApplication13.exe start
+D:\Debug\ConsoleApplication13.exe uninstall

@@ -1,0 +1,18 @@
+在Windows下面启用Redis和启动MogoDB一样，需要使用命令行启动，首先定位到该目录，运行如下命令：
+D:\Redis>redis-server.exe redis.conf
+因为是在本机运行的，这里要注意端口号，同时要保持端口不要关闭。
+
+现在再开一个控制台应用程序连接之前启动的Redis，如下：
+D:\Redis>redis-cli.exe -h 172.16.147.121 -p 6379
+
+其中 –h后面是本机的ip地址，后面的是端口。
+
+然后就可以执行set 给key为city赋值:
+redis 172.16.147.121:6379> set city Shanghai
+
+通过get可以获取指定key为city的值了。
+redis 172.16.147.121:6379> get city
+
+
+
+Install-Package ServiceStack.Redis

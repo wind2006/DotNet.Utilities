@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SocketConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ClusteredByIndex>false</ClusteredByIndex>
+  <Id>0</Id>
+  <SocketItem IpAddress="192.168.1.240" Port="9998">
+  <!--<SocketItem IpAddress="127.0.0.1" Port="9992">-->
+    <Id>0</Id>
+  </SocketItem>
+</SocketConfig>

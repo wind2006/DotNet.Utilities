@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNet3.5.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="T:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1">
+            <summary>
+            http 存储抽象对象
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.context">
+            <summary>
+            HttpContext 对象
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.Day">
+            <summary>
+            天
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.Hour">
+            <summary>
+            小时
+            </summary>
+        </member>
+        <member name="F:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.Minutes">
+            <summary>
+            分钟
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.Item(System.String)">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.Add(System.String,`0)">
+            <summary>
+            添加
+            </summary>
+            <param name="key">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.ContainsKey(System.String)">
+            <summary>
+            是否包含某个键
+            </summary>
+            <param name="key">键</param>
+            <returns>是否包含</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.Get(System.String)">
+            <summary>
+            按键取值
+            </summary>
+            <param name="key">键</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.GetAllKey">
+            <summary>
+            获取所有键
+            </summary>
+            <returns>集合</returns>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.Remove(System.String)">
+            <summary>
+            按键移除
+            </summary>
+            <param name="key">键</param>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.RemoveAll">
+            <summary>
+            移除所有
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet3._5.Interfaces.IHttpStorageObject`1.RemoveAll(System.Func{System.String,System.Boolean})">
+            <summary>
+            移除所有
+            </summary>
+            <param name="keySelector">选择器</param>
+        </member>
+        <member name="T:YanZhiwei.DotNet3._5.Interfaces.ISchedule">
+            <summary> 
+            计划的接口 
+            </summary> 
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Interfaces.ISchedule.DueTime">
+            <summary> 
+            初始化执行时间于现在时间的时间刻度差【毫秒】
+            </summary> 
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Interfaces.ISchedule.ExecutionTime">
+            <summary> 
+            最初计划执行时间 
+            </summary> 
+        </member>
+        <member name="P:YanZhiwei.DotNet3._5.Interfaces.ISchedule.Period">
+            <summary> 
+            循环的周期 
+            </summary> 
+        </member>
+    </members>
+</doc>

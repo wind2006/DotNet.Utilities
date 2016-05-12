@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8ED5A73C-F247-4D29-A363-B58E757102C9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cdz360Tools.Services</RootNamespace>
+    <AssemblyName>cdz360Tools.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNet.Core.Config, Version=1.0.5946.27436, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DotNet.Core.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet.Core.Model, Version=1.0.5946.27436, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DotNet.Core.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet.Framework.Contract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DotNet.Framework.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet.Framework.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DotNet.Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet.Log4Net.Utilities, Version=1.0.5946.28322, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DotNet.Log4Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet2.Interfaces, Version=1.0.5946.27436, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DotNet2.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet2.Utilities, Version=1.0.5946.27436, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DotNet2.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet3.5.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DotNet3.5.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNet3.5.Utilities, Version=1.0.5946.27436, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\DotNet3.5.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Cdz360DbService.cs" />
+    <Compile Include="CachedConfigContext.cs" />
+    <Compile Include="Cdz360DbContext.cs" />
+    <Compile Include="Cdz360Helper.cs" />
+    <Compile Include="Cdz360SocketServer.cs" />
+    <Compile Include="Contract\ICdz360DbService.cs" />
+    <Compile Include="Czd360DuplexServices.cs" />
+    <Compile Include="Models\Cdz360PackageData.cs" />
+    <Compile Include="Models\ChargingPileInfo.cs" />
+    <Compile Include="Models\ChargeOverHisRec.cs" />
+    <Compile Include="Models\DaoConfig.cs" />
+    <Compile Include="Models\JobConfig.cs" />
+    <Compile Include="Models\JobItem.cs" />
+    <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\PackageConst.cs" />
+    <Compile Include="Models\PackageErrorEnum.cs" />
+    <Compile Include="Models\SocketConfig.cs" />
+    <Compile Include="Models\SocketItem.cs" />
+    <Compile Include="Models\ChargingPileOnlineStatus.cs" />
+    <Compile Include="Models\ChargingPileOffline_HisRec.cs" />
+    <Compile Include="Models\ChargingPileOrder_HisRec.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DataBase\Cdz360.bak" />
+    <None Include="DLL\log4net.config" />
+    <None Include="Doc\鼎充电桩通信技术规约160302.pdf" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\DaoConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\JobConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\SocketConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataBase\Cdz360.sql" />
+    <Content Include="DLL\DotNet.Core.Config.dll" />
+    <Content Include="DLL\DotNet.Core.Config.XML" />
+    <Content Include="DLL\DotNet.Core.Log.dll" />
+    <Content Include="DLL\DotNet.Core.Model.dll" />
+    <Content Include="DLL\DotNet.Core.Model.xml" />
+    <Content Include="DLL\DotNet.Framework.Contract.dll" />
+    <Content Include="DLL\DotNet.Framework.Contract.pdb" />
+    <Content Include="DLL\DotNet.Framework.Contract.xml" />
+    <Content Include="DLL\DotNet.Framework.Data.dll" />
+    <Content Include="DLL\DotNet.Framework.Data.XML" />
+    <Content Include="DLL\DotNet.Log4Net.Utilities.dll" />
+    <Content Include="DLL\DotNet.Log4Net.Utilities.xml" />
+    <Content Include="DLL\DotNet2.Interfaces.dll" />
+    <Content Include="DLL\DotNet2.Interfaces.pdb" />
+    <Content Include="DLL\DotNet2.Interfaces.xml" />
+    <Content Include="DLL\DotNet2.Utilities.dll" />
+    <Content Include="DLL\DotNet2.Utilities.pdb" />
+    <Content Include="DLL\DotNet2.Utilities.xml" />
+    <Content Include="DLL\DotNet3.5.Interfaces.dll" />
+    <Content Include="DLL\DotNet3.5.Interfaces.pdb" />
+    <Content Include="DLL\DotNet3.5.Interfaces.xml" />
+    <Content Include="DLL\DotNet3.5.Utilities.dll" />
+    <Content Include="DLL\DotNet3.5.Utilities.pdb" />
+    <Content Include="DLL\DotNet3.5.Utilities.xml" />
+    <Content Include="DLL\Framework.Common.dll" />
+    <Content Include="DLL\Framework.Contract.dll" />
+    <Content Include="DLL\log4net.dll" />
+    <Content Include="DLL\log4net.xml" />
+    <Content Include="DLL\Newtonsoft.Json.dll" />
+    <Content Include="DLL\Newtonsoft.Json.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cdz360Tools.Contracts\cdz360Tools.Contracts.csproj">
+      <Project>{63f3d4ca-b9b0-47d5-a9a3-91ff7c5b16c4}</Project>
+      <Name>cdz360Tools.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DLL\zh-Hans\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

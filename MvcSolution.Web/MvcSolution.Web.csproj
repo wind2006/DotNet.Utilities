@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40A1AC09-ECE9-4A63-A2FE-F63736D24C4F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcSolution.Web</RootNamespace>
+    <AssemblyName>MvcSolution.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppServiceHelper.cs" />
+    <Compile Include="ControllerBase.cs" />
+    <Compile Include="PermissionAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefServiceFactory.cs" />
+    <Compile Include="ServiceContext.cs" />
+    <Compile Include="UserContext.cs" />
+    <Compile Include="VerifyCodeHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cms.Account.BLL\MvcSolution.Cms.BLL.csproj">
+      <Project>{df4e5b5a-cbb5-41a1-b91b-46e9dadc3f29}</Project>
+      <Name>MvcSolution.Cms.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cms.Account.Contract\MvcSolution.Cms.Contract.csproj">
+      <Project>{344cd318-38a4-4585-b691-f55ba39b59b7}</Project>
+      <Name>MvcSolution.Cms.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cms.Account.DAL\MvcSolution.Cms.DAL.csproj">
+      <Project>{2152b12e-2233-4e86-92d1-cb750069736f}</Project>
+      <Name>MvcSolution.Cms.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Crm.Account.BLL\MvcSolution.Crm.BLL.csproj">
+      <Project>{123e4bfb-e578-4bae-816b-54d73833933a}</Project>
+      <Name>MvcSolution.Crm.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Crm.Account.Contract\MvcSolution.Crm.Contract.csproj">
+      <Project>{02bc32d5-4312-4ef6-a8fb-56acf61a571d}</Project>
+      <Name>MvcSolution.Crm.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Crm.Account.DAL\MvcSolution.Crm.DAL.csproj">
+      <Project>{6080a9c8-ef83-4a2e-8cc8-be671022d19b}</Project>
+      <Name>MvcSolution.Crm.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcSolution.Account.BLL\MvcSolution.GMS.BLL.csproj">
+      <Project>{28e38172-3e64-4a82-b8b1-719be839751e}</Project>
+      <Name>MvcSolution.GMS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcSolution.Account.Contract\MvcSolution.GMS.Contract.csproj">
+      <Project>{9e2059ad-fd55-4da6-bc53-0bd382e3a20d}</Project>
+      <Name>MvcSolution.GMS.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcSolution.Account.DAL\MvcSolution.GMS.DAL.csproj">
+      <Project>{90568bdc-2e27-47b9-9401-e068188b6be2}</Project>
+      <Name>MvcSolution.GMS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcSolution.Core.Cache\MvcSolution.Core.Cache.csproj">
+      <Project>{6daa8ea0-731f-4b46-a94b-cd95716de1e8}</Project>
+      <Name>MvcSolution.Core.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcSolution.Core.Config\MvcSolution.Core.Config.csproj">
+      <Project>{1e4f6c6a-ac57-4583-afc7-fd9fb3b30d22}</Project>
+      <Name>MvcSolution.Core.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcSolution.Core.Log\MvcSolution.Core.Log.csproj">
+      <Project>{4482b3e4-f6a5-4338-8807-d69e7875c5d4}</Project>
+      <Name>MvcSolution.Core.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcSolution.Core.Service\MvcSolution.Core.Service.csproj">
+      <Project>{519fc4d5-aea7-4526-9017-de93c51b1da2}</Project>
+      <Name>MvcSolution.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OA.Account.BLL\MvcSolution.OA.BLL.csproj">
+      <Project>{4e7f714b-0e75-4cdf-acef-029afd75890d}</Project>
+      <Name>MvcSolution.OA.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OA.Account.Contract\MvcSolution.OA.Contract.csproj">
+      <Project>{21064996-7d27-4122-8ba4-4d6deedb8498}</Project>
+      <Name>MvcSolution.OA.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OA.Account.DAL\MvcSolution.OA.DAL.csproj">
+      <Project>{cb1f2830-4515-42a3-a91b-6181989919e5}</Project>
+      <Name>MvcSolution.OA.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.Core.Service\YanZhiwei.DotNet.Core.Service.csproj">
+      <Project>{bc9420f6-a104-415e-a1ed-ef4eab593833}</Project>
+      <Name>YanZhiwei.DotNet.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet.Core.Cache\YanZhiwei.DotNet.Core.Cache.csproj">
+      <Project>{46e9ab40-59a4-41a2-8274-348ad97a49d1}</Project>
+      <Name>YanZhiwei.DotNet.Core.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet.Core.Config\YanZhiwei.DotNet.Core.Config.csproj">
+      <Project>{6dabf7b8-c072-43cd-8876-3d2aaedb7a43}</Project>
+      <Name>YanZhiwei.DotNet.Core.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet.Core.Log\YanZhiwei.DotNet.Core.Log.csproj">
+      <Project>{0acae8bb-a16c-41ae-bef1-09cca7b79eac}</Project>
+      <Name>YanZhiwei.DotNet.Core.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Utilities\YanZhiwei.DotNet2.Utilities.csproj">
+      <Project>{2868748d-6fec-4423-8254-bc366507c589}</Project>
+      <Name>YanZhiwei.DotNet2.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet3.5.Utilities\YanZhiwei.DotNet3.5.Utilities.csproj">
+      <Project>{fce5db97-96ec-4e53-bc19-eee6f2aa88e0}</Project>
+      <Name>YanZhiwei.DotNet3.5.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.Framework.Common\YanZhiwei.DotNet.Framework.Contract.csproj">
+      <Project>{5cd641fa-33ba-4fa3-9df4-97a0c2e53e14}</Project>
+      <Name>YanZhiwei.DotNet.Framework.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.Framework.Mvc\YanZhiwei.Framework.Mvc.csproj">
+      <Project>{39b3f1bf-acc2-4d6b-b405-58fc723ac1ab}</Project>
+      <Name>YanZhiwei.Framework.Mvc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

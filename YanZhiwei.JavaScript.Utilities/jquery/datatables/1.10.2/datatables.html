@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>datatables 1.10.2</title>
+    <link href="media/css/jquery.dataTables.css" rel="stylesheet" />
+    <script src="../../../jsUtils.js" type="text/javascript"></script>
+    <script src="../../jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="../../../jqUtils.js" type="text/javascript"></script>
+    <script src="media/js/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="datatablesUtils.js" type="text/javascript"></script>
+    <script src="../../json2.js" type="text/javascript"></script>
+    <style type="text/css">
+        /*table.dataTable tbody tr.selected {
+            background-color: lightgreen;
+        }*/
+    </style>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            var _columns = [
+                       {
+                           "mData": null,
+                           "bSortable": false,
+                           "width": "10%",
+                           "mRender": function (data, type, row) {
+                               return '<input type="checkbox" id="someCheckbox" name="someCheckbox" checked />';
+                           }
+                       },
+                       { "data": "time", "title": "时间", "class": "center", "width": "20%" },
+                       { "data": "log", "title": "日志", "class": "center", "width": "50%" },
+                       { "data": "status", "title": "状态", "class": "center", "width": "10%" },
+                       {
+                           "mData": null,
+                           "bSortable": false,
+                           "width": "10%",
+                           "mRender": function (data, type, row) {
+                               return '<a href=#/' + data.time + '>' + '编辑' + '</a>';
+                           }
+                       }
+            ];
+
+            $('#tableLog').executeQuery(_columns);
+
+        });
+        function AddJson() {
+            var _jsonObj = [{ "time": "2015-10-11", "log": "test", "status": "正常" },
+           { "time": "2015-10-12", "log": "test", "status": "正常" },
+           { "time": "2015-10-13", "log": "test", "status": "正常" }
+            ];
+            $('#tableLog').dataTable().addJson(_jsonObj);
+
+            //var _jsonString = JSON.stringify(_jsonObj);
+            //$('#tableLog').dataTable().addJson(_jsonString);
+        }
+        function RowClick() {
+            $('#tableLog').dataTable().rowClickEvent(function (rowData) {
+
+                alert(rowData.time);
+            });
+
+        }
+        function HightSingleRow() {
+            $('#tableLog').dataTable().hightSingleRow();
+
+        }
+        function HightMutilRow() {
+
+            $('#tableLog').dataTable().hightMutilRow();
+        }
+        function getSelectedRowIndex() {
+            var _selectedIndex = $('#tableLog').dataTable().getSelectedRowIndex();
+            alert(_selectedIndex);
+        }
+        function getSelectedRowsData() {
+            var _selectedData = $('#tableLog').dataTable().getSelectedRowsData();
+            alert(_selectedData[0].time);
+        }
+        function updateRowByIndex() {
+            var data = { "time": "2015-10-8", "log": " update test", "status": "正常" };
+            $('#tableLog').dataTable().updateRowByIndex(0, data);
+        }
+        function deleteRowByIndex() {
+            $('#tableLog').dataTable().deleteRowByIndex(0);
+        }
+        function getAllRows() {
+            var _allRowsData = $('#tableLog').dataTable().getAllRows();
+            alert(_allRowsData[0].time);
+        }
+        function getRowCount() {
+            var _rowCount = $('#tableLog').dataTable().getRowCount();
+            alert(_rowCount);
+        }
+        function foreach() {
+            var table = $('#tableLog').dataTable();
+            table.foreach(function (data) {
+                console.log(data.time);
+            })
+        }
+        function getRowByParam() {
+            var table = $('#tableLog').dataTable();
+            var _row = table.getRowByParam('time', '2015-10-11');
+
+            _row.data.time = '2015-10-22';
+            $('#tableLog').DataTable().draw();
+        }
+        function deleteRowByParam() {
+            var table = $('#tableLog').dataTable();
+            table.deleteRowByParam('time', '2015-10-11');
+
+        }
+        function getRowIndexByParam() {
+            var table = $('#tableLog').dataTable();
+            var _rowIndex = table.getRowIndexByParam('time', '2015-10-13');
+            if (_rowIndex >= 0) {
+
+                table.updateRowByIndex(_rowIndex, { "time": "2015-10-22", "log": "test", "status": "不正常" });
+            }
+        }
+    </script>
+</head>
+<body>
+    <table width="80%" class="display" id="tableLog" cellspacing="0"></table>
+    <input type="button" value="addJson" onclick="AddJson()" />
+    <input type="button" value="rowClick" onclick="RowClick()" />
+    <input type="button" value="hightSingleRow" onclick="HightSingleRow()" />
+    <input type="button" value="hightMutilRow" onclick="HightMutilRow()" />
+    <input type="button" value="getSelectedRowsData" onclick="getSelectedRowsData()" />
+    <input type="button" value="getSelectedRowIndex" onclick="getSelectedRowIndex()" />
+    <input type="button" value="updateRowByIndex" onclick="updateRowByIndex()" />
+    <input type="button" value="deleteRowByIndex" onclick="deleteRowByIndex()" />
+    <input type="button" value="clearAllRows" onclick="clearAllRows()" />
+    <input type="button" value="getAllRows" onclick="getAllRows()" />
+    <input type="button" value="getRowCount" onclick="getRowCount()" />
+    <input type="button" value="foreach" onclick="foreach()" />
+    <input type="button" value="getRowByParam" onclick="getRowByParam()" />
+    <input type="button" value="getRowIndexByParam" onclick="getRowIndexByParam()" />
+    <input type="button" value="deleteRowByParam" onclick="deleteRowByParam()" />
+</body>
+</html>

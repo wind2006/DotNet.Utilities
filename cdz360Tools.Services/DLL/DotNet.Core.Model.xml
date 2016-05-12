@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNet.Core.Model</name>
+    </assembly>
+    <members>
+        <member name="T:YanZhiwei.DotNet.Core.Model.CacheConfig">
+            <summary>
+            缓存配置项
+            </summary>
+            时间：2015-12-31 16:58
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet.Core.Model.CacheConfig.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheConfig.CacheConfigItems">
+            <summary>
+            缓存配置项集合
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheConfig.CacheProviderItems">
+            <summary>
+            缓存提供者项集合
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet.Core.Model.CacheConfigItem">
+            <summary>
+            缓存配置
+            </summary>
+            时间：2015-12-31 14:22
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheConfigItem.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheConfigItem.IsAbsoluteExpiration">
+            <summary>
+            是否绝对时间
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheConfigItem.KeyRegex">
+            <summary>
+            缓存键的正则表达式
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheConfigItem.Minitus">
+            <summary>
+            分钟
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheConfigItem.ModuleRegex">
+            <summary>
+            功能正则表达式
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheConfigItem.Priority">
+            <summary>
+            Gets or sets the priority.
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheConfigItem.ProviderName">
+            <summary>
+            ProviderName
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet.Core.Model.CacheProviderItem">
+            <summary>
+            缓存Provider
+            </summary>
+            时间：2015-12-31 14:21
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheProviderItem.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheProviderItem.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.CacheProviderItem.Type">
+            <summary>
+            类型，格式：类全名,程序集名
+            </summary>
+        </member>
+        <member name="T:YanZhiwei.DotNet.Core.Model.ConfigFileBase">
+            <summary>
+            配置文件基类
+            </summary>
+            时间：2015-12-31 9:22
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet.Core.Model.ConfigFileBase.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+            时间：2015-12-31 9:23
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.ConfigFileBase.ClusteredByIndex">
+            <summary>
+            是否分区索引，所设置分区索引，将验证分区索引名称
+            </summary>
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.ConfigFileBase.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="M:YanZhiwei.DotNet.Core.Model.ConfigFileBase.Save">
+            <summary>
+            保存
+            </summary>
+            时间：2015-12-31 9:23
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet.Core.Model.ConfigFileBase.UpdateNodeList``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            更新配置文件内节点Id
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="nodeList">配置节点结合</param>
+            时间：2015-12-31 9:23
+            备注：
+        </member>
+        <member name="T:YanZhiwei.DotNet.Core.Model.ConfigNodeBase">
+            <summary>
+            配置节点基类
+            </summary>
+            时间：2015-12-31 9:25
+            备注：
+        </member>
+        <member name="M:YanZhiwei.DotNet.Core.Model.ConfigNodeBase.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+            时间：2015-12-31 9:25
+            备注：
+        </member>
+        <member name="P:YanZhiwei.DotNet.Core.Model.ConfigNodeBase.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+    </members>
+</doc>

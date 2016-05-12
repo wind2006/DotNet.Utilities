@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2868748D-6FEC-4423-8254-BC366507C589}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YanZhiwei.DotNet2.Utilities</RootNamespace>
+    <AssemblyName>DotNet2.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">RUNNING_ON_2;DEBUG</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.0' ">RUNNING_ON_3;DEBUG</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.5' ">RUNNING_ON_3_5;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\DotNet2.Utilities.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">RUNNING_ON_2</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.0' ">RUNNING_ON_3</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.5' ">RUNNING_ON_3_5</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\DotNet2.Utilities.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AttributeHelper.cs" />
+    <Compile Include="Common\ComparisonHelper.cs" />
+    <Compile Include="Common\DataHelper.cs" />
+    <Compile Include="Common\DataSetHelper.cs" />
+    <Compile Include="Common\DataTableHelper.cs" />
+    <Compile Include="Common\DbParameterHelper.cs" />
+    <Compile Include="Common\EqualityHelper.cs" />
+    <Compile Include="Common\FrameworkExceptionHelper.cs" />
+    <Compile Include="Common\IDbCommandHelper.cs" />
+    <Compile Include="Common\MD5EncryptHelper.cs" />
+    <Compile Include="Core\AjaxResult.cs" />
+    <Compile Include="Core\BuilderKey.cs" />
+    <Compile Include="Core\BusinessException.cs" />
+    <Compile Include="Core\BusinessFactory.cs" />
+    <Compile Include="Core\ConfigSettings.cs" />
+    <Compile Include="Core\Disposable.cs" />
+    <Compile Include="Core\DynamicBuilder.cs" />
+    <Compile Include="Core\FrameworkException.cs" />
+    <Compile Include="Core\Logger.cs" />
+    <Compile Include="Core\OperationResult.cs" />
+    <Compile Include="Core\PagedList.cs" />
+    <Compile Include="Core\PerformanceTest.cs" />
+    <Compile Include="Core\ProjectTraceListener.cs" />
+    <Compile Include="Core\SerializableDictionary.cs" />
+    <Compile Include="Common\ADDomainHelper.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Common\DecimalHelper.cs" />
+    <Compile Include="Common\DoubleHelper.cs" />
+    <Compile Include="Common\EventHandlerHelper.cs" />
+    <Compile Include="Common\ExifHelper.cs" />
+    <Compile Include="Common\IDataReaderHelper.cs" />
+    <Compile Include="Common\ProjectHelper.cs" />
+    <Compile Include="Common\SmtpClientHelper.cs" />
+    <Compile Include="Core\Singleton.cs" />
+    <Compile Include="Core\SingletonDictionary.cs" />
+    <Compile Include="Core\SingletonList.cs" />
+    <Compile Include="Core\SingletonType.cs" />
+    <Compile Include="Core\SqlServerDbBackUp.cs" />
+    <Compile Include="Core\SqlServerScriptBuilder.cs" />
+    <Compile Include="Core\SqlServerTransaction.cs" />
+    <Compile Include="Enums\AjaxResultType.cs" />
+    <Compile Include="Enums\DBTypeName.cs" />
+    <Compile Include="Enums\ImageCutMode.cs" />
+    <Compile Include="Enums\OperationResultType.cs" />
+    <Compile Include="Enums\OrderBy.cs" />
+    <Compile Include="Enums\OrderWay.cs" />
+    <Compile Include="Enums\ProgramMode.cs" />
+    <Compile Include="Enums\SerialPortBaudRates.cs" />
+    <Compile Include="Enums\SerialPortDatabits.cs" />
+    <Compile Include="Enums\SetWaterPosition.cs" />
+    <Compile Include="Models\EnumTitleAttribute.cs" />
+    <Compile Include="Models\ExifMetadata.cs" />
+    <Compile Include="Models\ExifMetadataDetail.cs" />
+    <Compile Include="Models\PageCondition.cs" />
+    <Compile Include="Models\PageResult.cs" />
+    <Compile Include="Models\PerformanceParams.cs" />
+    <Compile Include="Models\SmtpServer.cs" />
+    <Compile Include="Models\SortCondition.cs" />
+    <Compile Include="ValidateCode\AnimatedGifEncoder.cs" />
+    <Compile Include="ValidateCode\LZWEncoder.cs" />
+    <Compile Include="ValidateCode\NeuQuant.cs" />
+    <Compile Include="ValidateCode\ValidateCodeType.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style1.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style10.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style11.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style12.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style13.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style14.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style2.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style3.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style4.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style5.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style6.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style7.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style8.cs" />
+    <Compile Include="ValidateCode\ValidateCode_Style9.cs" />
+    <Compile Include="WebForm\Core\CacheManger.cs" />
+    <Compile Include="WebForm\Core\CookieManger.cs" />
+    <Compile Include="WebForm\Core\PagerHtmlScript.cs" />
+    <Compile Include="WebForm\Core\SessionManager.cs" />
+    <Compile Include="WebForm\DropDownListHelper.cs" />
+    <Compile Include="WebForm\FileDownHelper.cs" />
+    <Compile Include="WebForm\FileHelper.cs" />
+    <Compile Include="WebForm\GridViewHelper.cs" />
+    <Compile Include="WebForm\ClientScriptHelper.cs" />
+    <Compile Include="WebForm\HtmlInputFileHelper.cs" />
+    <Compile Include="WebForm\HyperlinkHelper.cs" />
+    <Compile Include="WebForm\LinkButtonHelper.cs" />
+    <Compile Include="WebForm\ListBoxHelper.cs" />
+    <Compile Include="WebForm\NetWorkHelper.cs" />
+    <Compile Include="WebForm\WebFormHelper.cs" />
+    <Compile Include="WebForm\FetchHelper.cs" />
+    <Compile Include="Core\SqlServerPageScript.cs" />
+    <Compile Include="Core\ExceptionMessage.cs" />
+    <Compile Include="Core\SocketClient.cs" />
+    <Compile Include="Core\SocketServer.cs" />
+    <Compile Include="Common\ASCIIHelper.cs" />
+    <Compile Include="Common\AssemblyHelper.cs" />
+    <Compile Include="Common\Base64Helper.cs" />
+    <Compile Include="Common\BCDHelper.cs" />
+    <Compile Include="Common\BDGCJLatLonHelper.cs" />
+    <Compile Include="Common\BitArrayHelper.cs" />
+    <Compile Include="Common\BitHelper.cs" />
+    <Compile Include="Common\CheckHelper.cs" />
+    <Compile Include="Common\AppSettingsHelper.cs" />
+    <Compile Include="Common\ArrayHelper.cs" />
+    <Compile Include="Core\BindList.cs" />
+    <Compile Include="Common\ByteHelper.cs" />
+    <Compile Include="Common\AccessHelper.cs" />
+    <Compile Include="Common\ConfigurationHelper.cs" />
+    <Compile Include="Common\ConvertHelper.cs" />
+    <Compile Include="Common\DebugHelper.cs" />
+    <Compile Include="Common\DictionaryHelper.cs" />
+    <Compile Include="Common\GuidHelper.cs" />
+    <Compile Include="Common\CSVHelper.cs" />
+    <Compile Include="Common\DateHelper.cs" />
+    <Compile Include="Common\DESEncryptHelper.cs" />
+    <Compile Include="Common\HtmlHelper.cs" />
+    <Compile Include="Common\IEnumerableHelper.cs" />
+    <Compile Include="Common\EnumHelper.cs" />
+    <Compile Include="Common\ExceptionHelper.cs" />
+    <Compile Include="Common\FileHelper.cs" />
+    <Compile Include="Common\FontHelper.cs" />
+    <Compile Include="Common\FormulaHelper.cs" />
+    <Compile Include="Common\HexHelper.cs" />
+    <Compile Include="Common\IListHelper.cs" />
+    <Compile Include="Common\ImageHelper.cs" />
+    <Compile Include="Common\INIHelper.cs" />
+    <Compile Include="Common\JsonHelper.cs" />
+    <Compile Include="Common\MathHelper.cs" />
+    <Compile Include="Common\ProcessHelper.cs" />
+    <Compile Include="Common\SortHelper.cs" />
+    <Compile Include="Common\StringBuilderHelper.cs" />
+    <Compile Include="Core\ThreadSafeLazy.cs" />
+    <Compile Include="Common\MapHelper.cs" />
+    <Compile Include="Common\MapOffsetDataHelper.cs" />
+    <Compile Include="Common\MapOffsetHelper.cs" />
+    <Compile Include="Common\TestHelper.cs" />
+    <Compile Include="Common\ThreadHelper.cs" />
+    <Compile Include="Common\ThreadPoolHelper.cs" />
+    <Compile Include="Common\TimeSpanHelper.cs" />
+    <Compile Include="Common\UnixEpochHelper.cs" />
+    <Compile Include="Common\WGSMercatorLatLonHelper.cs" />
+    <Compile Include="Common\WGSGCJLatLonHelper.cs" />
+    <Compile Include="Common\XMLOpHelper.cs" />
+    <Compile Include="Enums\DateDiff.cs" />
+    <Compile Include="Enums\SerialPortState.cs" />
+    <Compile Include="Enums\StripHtmlType.cs" />
+    <Compile Include="Models\ClipboardCtrl.cs" />
+    <Compile Include="Models\ResponseContentType.cs" />
+    <Compile Include="Models\ControlRect.cs" />
+    <Compile Include="Enums\ExceptionMode.cs" />
+    <Compile Include="Models\GeoPoint.cs" />
+    <Compile Include="Models\JsChildNode.cs" />
+    <Compile Include="Models\JsTreeNode.cs" />
+    <Compile Include="Models\ListItem.cs" />
+    <Compile Include="Models\MapCoord.cs" />
+    <Compile Include="Models\LatLngPoint.cs" />
+    <Compile Include="Common\LogHelper.cs" />
+    <Compile Include="Common\NameValueHelper.cs" />
+    <Compile Include="Common\ResourceHelper.cs" />
+    <Compile Include="Common\RMBHelper.cs" />
+    <Compile Include="Common\ThumbHelper.cs" />
+    <Compile Include="Enums\ToHexadecimal.cs" />
+    <Compile Include="Enums\Conversion.cs" />
+    <Compile Include="Enums\Buttons.cs" />
+    <Compile Include="Enums\Formula.cs" />
+    <Compile Include="Enums\LogType.cs" />
+    <Compile Include="ExtensionHelper.cs" />
+    <Compile Include="Models\MenuStripItem.cs" />
+    <Compile Include="Models\SocketCode.cs" />
+    <Compile Include="Models\SocketData.cs" />
+    <Compile Include="Models\SocketObj.cs" />
+    <Compile Include="Models\TipMessage.cs" />
+    <Compile Include="Models\Tuple.cs" />
+    <Compile Include="Models\Validation.cs" />
+    <Compile Include="Common\SqlServerHelper.cs" />
+    <Compile Include="Common\NetWorkHelper.cs" />
+    <Compile Include="Common\EntityHelper.cs" />
+    <Compile Include="Common\OLEDBExcelHelper.cs" />
+    <Compile Include="Common\PinyingHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\MapOffsetComparer.cs" />
+    <Compile Include="Core\PropertyComparer.cs" />
+    <Compile Include="Common\RandomHelper.cs" />
+    <Compile Include="Common\ReflectHelper.cs" />
+    <Compile Include="Common\RegexHelper.cs" />
+    <Compile Include="Common\SectionHelper.cs" />
+    <Compile Include="Common\SerializeHelper.cs" />
+    <Compile Include="Common\SerialPortHelper.cs" />
+    <Compile Include="Common\StringHelper.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Core\ThreadSafeDictionary.cs" />
+    <Compile Include="Core\ThreadSafeEnumerable.cs" />
+    <Compile Include="Core\ThreadSafeEnumerator.cs" />
+    <Compile Include="Core\ThreadSafeList.cs" />
+    <Compile Include="Core\ThreadSafeQueue.cs" />
+    <Compile Include="Core\UBinder.cs" />
+    <Compile Include="Common\ValidateHelper.cs" />
+    <Compile Include="Common\XMLHelper.cs" />
+    <Compile Include="Core\RegexPattern.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\ApplicationHelper.cs" />
+    <Compile Include="WinForm\AutoSizeFormHelper.cs" />
+    <Compile Include="WinForm\Core\MessageBoxTimeOut.cs" />
+    <Compile Include="WinForm\Core\TreeViewSerializer.cs" />
+    <Compile Include="WinForm\BindingSourceHelper.cs" />
+    <Compile Include="WinForm\CheckBoxHelper.cs" />
+    <Compile Include="WinForm\CheckedListBoxHelper.cs" />
+    <Compile Include="WinForm\ComboBoxHelper.cs" />
+    <Compile Include="WinForm\ControlHelper.cs" />
+    <Compile Include="WinForm\DataGridCRUDHelper.cs" />
+    <Compile Include="WinForm\DataGridHelper.cs" />
+    <Compile Include="WinForm\Core\DatagridViewCheckBoxHeaderCell.cs" />
+    <Compile Include="WinForm\ExtendedForm\ExtendedResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExtendedResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\ExtendedForm\SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\ExtendedForm\SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\FormHelper.cs" />
+    <Compile Include="WinForm\LanguageHelper.cs" />
+    <Compile Include="WinForm\OpenFolderDialogHelper.cs" />
+    <Compile Include="WinForm\ListBoxHelper.cs" />
+    <Compile Include="WinForm\MdiFormHelper.cs" />
+    <Compile Include="WinForm\MenuStripHelper.cs" />
+    <Compile Include="WinForm\MessageHelper.cs" />
+    <Compile Include="WinForm\NotepadHelper.cs" />
+    <Compile Include="WinForm\NumericUpDownHelper.cs" />
+    <Compile Include="WinForm\OpenFileDialogHelper.cs" />
+    <Compile Include="WinForm\ProgressBarHelper.cs" />
+    <Compile Include="WinForm\RichTextBoxHelper.cs" />
+    <Compile Include="WinForm\SerialPortHelper.cs" />
+    <Compile Include="WinForm\TabControlHelper.cs" />
+    <Compile Include="WinForm\TabPageHelper.cs" />
+    <Compile Include="WinForm\TextBoxHelper.cs" />
+    <Compile Include="WinForm\TooltipHelper.cs" />
+    <Compile Include="WinForm\TreeViewHelper.cs" />
+    <Compile Include="WinForm\UIHelper.cs" />
+    <Compile Include="WinForm\WebBrowserHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\ExtendedForm\ExtendedResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExtendedResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\ExtendedForm\SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documents\Common\.NET REACTOR 使用手册.pdf" />
+    <None Include="Documents\Common\.NET：如何让线程支持超时？.pdf" />
+    <None Include="Documents\Common\C# 4.0 新特性之并行运算%28Parallel%29.pdf" />
+    <None Include="Documents\Common\C#的Enum中Flags的用法.pdf" />
+    <None Include="Documents\Common\CSharp.docx" />
+    <None Include="Documents\Common\Enum in C# .pdf" />
+    <None Include="Documents\Common\Exif文件格式描述.pdf" />
+    <None Include="Documents\Common\Exif.pdf" />
+    <None Include="Documents\Common\常见dotNet加密保护工具分析介绍.pdf" />
+    <None Include="Documents\Common\浅谈Asp.net中使用“充血模型”.pdf" />
+    <None Include="Documents\JavaScript\jQuery Datatable 自定义列.pdf" />
+    <None Include="Documents\JavaScript\Js 闭包.pdf" />
+    <None Include="Documents\JavaScript\Js中new的运行机制.pdf" />
+    <None Include="Documents\JavaScript\Js作用域和this关键字.pdf" />
+    <None Include="Documents\JavaScript\Js原型和原型链.pdf" />
+    <None Include="Documents\JavaScript\Js的call与apply.pdf" />
+    <None Include="Documents\JavaScript\初探传说中的setImmediate函数.pdf" />
+    <None Include="Documents\SQL Server\SQL Server.docx" />
+    <None Include="Documents\WebForm\ASP.NET IHttpHandler.pdf" />
+    <None Include="Documents\WebForm\Web Service 身份验证.pdf" />
+    <None Include="Resources\Loading.gif" />
+    <None Include="Settings.StyleCop" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Interfaces\YanZhiwei.DotNet2.Interfaces.csproj">
+      <Project>{cd749b3d-29d3-4ae3-8acd-21210bc6e069}</Project>
+      <Name>YanZhiwei.DotNet2.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documents\Python\PyCharm.txt" />
+    <Content Include="Documents\WebForm\各浏览器Cookie大小，个数限制.txt" />
+    <Content Include="nuget 命令.txt" />
+    <Content Include="SQL\Sql Server\proc_DataPage.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

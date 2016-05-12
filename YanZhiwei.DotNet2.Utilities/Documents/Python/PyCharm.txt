@@ -1,0 +1,7 @@
+两个步骤： 
+1、设置PyCharm工具的编码格式：File--》setting--》Editor--》File Encodings--》IDE encoding：utf-8 
+
+3、在File--》Setting--》File and Code Templates模块里加入下面语句： 
+#-*-coding:utf-8-*- 
+__author__ = '$USER' 
+注意：#-*-coding:utf-8-*- 一定要在第一行

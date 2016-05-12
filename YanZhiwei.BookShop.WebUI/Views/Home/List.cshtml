@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "List";
+    Layout = null;
+}
+<h3>This is the /Views/Home/List.cshtml View</h3>
+@Html.Partial("MyPartial");
+@*我们通过 @Html.Action 方法来调用了 Time action 方法来呈现子内容。
+在这个方法中我们只传了一个action名称参数，MVC将根据当前View所在Controller去查找这个action。
+如果是调用其它 controller 中的 action 方法，则需要在第二个参数中指定 controller 的名称，
+如下：@Html.Action("Time", "MyController")*@ 
+@Html.Action("Time")

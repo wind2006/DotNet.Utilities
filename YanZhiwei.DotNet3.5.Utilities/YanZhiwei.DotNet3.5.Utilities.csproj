@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCE5DB97-96EC-4E53-BC19-EEE6F2AA88E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YanZhiwei.DotNet3._5.Utilities</RootNamespace>
+    <AssemblyName>DotNet3.5.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">RUNNING_ON_2;DEBUG</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.0' ">RUNNING_ON_3;DEBUG</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.5' ">RUNNING_ON_3_5;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\DotNet3.5.Utilities.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">RUNNING_ON_2</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.0' ">RUNNING_ON_3</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.5' ">RUNNING_ON_3_5</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\DotNet3.5.Utilities.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AssemblyHelper.cs" />
+    <Compile Include="Common\FrameworkExceptionHelper.cs" />
+    <Compile Include="Common\GuidHelper.cs" />
+    <Compile Include="Common\IDataReaderHelper.cs" />
+    <Compile Include="Common\PageHelper.cs" />
+    <Compile Include="Common\TypeHelper.cs" />
+    <Compile Include="Common\WcfServiceProxy.cs" />
+    <Compile Include="Core\ExpressionEvaluator.cs" />
+    <Compile Include="Core\ExpressionTranslator.cs" />
+    <Compile Include="Core\ExpressionVisitor.cs" />
+    <Compile Include="Core\Locker.cs" />
+    <Compile Include="Enums\UploadFileSaveType.cs" />
+    <Compile Include="Model\DataTablePageResult.cs" />
+    <Compile Include="Model\UploadFileMessage.cs" />
+    <Compile Include="Model\UploadFileConfig.cs" />
+    <Compile Include="Model\UploadImageMessage.cs" />
+    <Compile Include="WebForm\Core\CookiesManager.cs" />
+    <Compile Include="WebForm\Core\VerificationCode.cs" />
+    <Compile Include="WebForm\Core\WebUploadFile.cs" />
+    <Compile Include="WebForm\Core\WebUploadImage.cs" />
+    <Compile Include="WebForm\HandlerHelper.cs" />
+    <Compile Include="WebForm\Jquery\DataTableHelper.cs" />
+    <Compile Include="WebForm\UrlHelper.cs" />
+    <Compile Include="Common\AESEncryptHelper.cs" />
+    <Compile Include="Core\CommonEqualityComparer.cs" />
+    <Compile Include="Core\ScriptConverter\DateTimeConverter.cs" />
+    <Compile Include="Common\DistinctHelper.cs" />
+    <Compile Include="Common\EnumerableHelper.cs" />
+    <Compile Include="Common\ExpressionHelper.cs" />
+    <Compile Include="Common\IPropertyChangedHelper.cs" />
+    <Compile Include="Common\RecursiveJoinHelper.cs" />
+    <Compile Include="Common\SerializationHelper.cs" />
+    <Compile Include="Core\Job.cs" />
+    <Compile Include="Core\JobScheduler.cs" />
+    <Compile Include="Common\UserAgentHelper.cs" />
+    <Compile Include="Common\WhereIfHelper.cs" />
+    <Compile Include="Model\JsonResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\SchedulerType\CycExecution.cs" />
+    <Compile Include="Core\SchedulerType\ImmediateExecution.cs" />
+    <Compile Include="Core\NotifyPropertyChanged.cs" />
+    <Compile Include="Core\SchedulerType\ScheduleExecutionOnce.cs" />
+    <Compile Include="WebForm\Core\WebRequest.cs" />
+    <Compile Include="WPF\ControlHelper.cs" />
+    <Compile Include="WPF\DispatcherHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Interfaces\YanZhiwei.DotNet2.Interfaces.csproj">
+      <Project>{cd749b3d-29d3-4ae3-8acd-21210bc6e069}</Project>
+      <Name>YanZhiwei.DotNet2.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet2.Utilities\YanZhiwei.DotNet2.Utilities.csproj">
+      <Project>{2868748d-6fec-4423-8254-bc366507c589}</Project>
+      <Name>YanZhiwei.DotNet2.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YanZhiwei.DotNet3.5.Interfaces\YanZhiwei.DotNet3.5.Interfaces.csproj">
+      <Project>{6c759c77-94da-43e2-8351-175e3ecbaf14}</Project>
+      <Name>YanZhiwei.DotNet3.5.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documents\WCF\WCF.docx" />
+    <None Include="Documents\WCF\手动配置WCF宿主的.config文件遇到的几种错误.pdf" />
+    <None Include="Documents\WCF\服务器×××上的MSDTC不可用解决办法.pdf" />
+    <None Include="Settings.StyleCop" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

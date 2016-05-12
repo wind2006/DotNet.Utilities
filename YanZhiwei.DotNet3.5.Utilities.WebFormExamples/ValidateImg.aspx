@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ValidateImg.aspx.cs" Inherits="YanZhiwei.DotNet3._5.Utilities.WebFormExamples.ValidateImg" %>
